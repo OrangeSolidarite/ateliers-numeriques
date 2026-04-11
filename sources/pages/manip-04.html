@@ -1,0 +1,154 @@
+﻿<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manipuler la souris - Exercice 4</title>
+    <link rel="stylesheet" href="../style/main.css">    
+    <link rel="shortcut icon" type="image/x-icon" href="../images/orange-logo.svg">
+</head>
+
+<body>
+    <!-- Header commun -->
+    <header>
+        <div class="header__inner">
+            <div class="header__left">
+                <a href="../../index.html">
+                    <img src="../images/orange-logo.svg" alt="Logo Orange" class="header__logo">
+                </a>
+                <h1 class="header__title">Tutoriels - Manipulation de la souris et du clavier</h1>
+            </div>
+            <div class="header__right">
+                <span class="badge">Manip' 4</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <h1 class="hero__title">Trouvez le chiffre caché</h1>
+            <p class="hero__subtitle">
+                <strong>Objectif :</strong> Explorez la zone colorée et cliquez sur le chiffre <strong>5</strong>
+            </p>
+        </section>
+
+        <!-- Info Section -->
+        <div class="info-section">
+            <h2 class="info-section__title">🎯 Nouveau défi</h2>
+            <p class="info-section__text">
+                Cette fois, le chiffre 5 est bien caché parmi d'autres chiffres. Déplacez votre souris
+                pour le trouver et attendez que le curseur se transforme en main avant de cliquer.
+            </p>
+        </div>
+
+        <!-- Grid Layout -->
+        <div class="grid">
+            <!-- Instructions Card -->
+            <div class="card">
+                <h2 class="card__title">Instructions</h2>
+
+                <div class="steps">
+                    <div class="step">
+                        <strong>Explorez la zone :</strong><br>
+                        Déplacez doucement votre souris dans toute la zone colorée à droite.
+                    </div>
+
+                    <div class="step">
+                        <strong>Cherchez le chiffre 5 :</strong><br>
+                        Plusieurs chiffres sont affichés, mais un seul est le bon.
+                        Le vrai 5 est orange et cliquable.
+                    </div>
+
+                    <div class="step">
+                        <strong>Repérez le changement de curseur :</strong><br>
+                        Quand vous passez sur le bon chiffre, le curseur devient une main.
+                    </div>
+
+                    <div class="step">
+                        <strong>Cliquez :</strong><br>
+                        Une fois le curseur en forme de main, cliquez avec votre index
+                        sur le bouton gauche de la souris.
+                    </div>
+                </div>
+
+                <div
+                    style="margin-top: 12px; padding: 8px; background-color: #e3f2fd; border-left: 4px solid #2196f3; border-radius: 8px;">
+                    <strong style="color: #1976d2;">💡 Astuce :</strong>
+                    <span style="color: #1565c0; font-size: 13px;">
+                        Explorez bien tous les coins de la zone !
+                    </span>
+                </div>
+            </div>
+
+            <!-- Search Area Card -->
+            <div class="card">
+                <h2 class="card__title">Zone de recherche</h2>
+
+                <div
+                    style="position: relative; min-height: 400px; background: linear-gradient(135deg, #fff3e6 0%, #ffe0b2 100%);border-radius: var(--radius-md);padding: var(--spacing-lg);margin: var(--spacing-md) 0;">
+                    <!-- Chiffres leurres - disposition aléatoire -->
+                    <span
+                        style="position: absolute;font-size: 24px;font-weight: 600;color: var(--text-light);user-select: none;pointer-events: none;top: 18%; left: 12%;">3</span>
+                    <span
+                        style="position: absolute;font-size: 24px;font-weight: 600;color: var(--text-light);user-select: none;pointer-events: none;top: 65%; right: 25%;">7</span>
+                    <span
+                        style="position: absolute;font-size: 24px;font-weight: 600;color: var(--text-light);user-select: none;pointer-events: none;top: 42%; left: 35%;">2</span>
+                    <span
+                        style="position: absolute;font-size: 24px;font-weight: 600;color: var(--text-light);user-select: none;pointer-events: none;bottom: 28%; left: 8%;">9</span>
+                    <span
+                        style="position: absolute;font-size: 24px;font-weight: 600;color: var(--text-light);user-select: none;pointer-events: none;top: 72%; left: 15%;">4</span>
+                    <span
+                        style="position: absolute;font-size: 24px;font-weight: 600;color: var(--text-light);user-select: none;pointer-events: none;bottom: 48%; right: 38%;">1</span>
+                    <span
+                        style="position: absolute;font-size: 24px;font-weight: 600;color: var(--text-light);user-select: none;pointer-events: none;top: 15%; left: 58%;">8</span>
+                    <span
+                        style="position: absolute;font-size: 24px;font-weight: 600;color: var(--text-light);user-select: none;pointer-events: none;bottom: 22%; left: 52%;">6</span>
+                    <span
+                        style="position: absolute;font-size: 24px;font-weight: 600;color: var(--text-light);user-select: none;pointer-events: none;top: 38%; right: 45%;">3</span>
+                    <span
+                        style="position: absolute;font-size: 24px;font-weight: 600;color: var(--text-light);user-select: none;pointer-events: none;bottom: 58%; right: 18%;">7</span>
+
+                    <!-- Faux 5 (leurres) - disposition aléatoire -->
+                    <span
+                        style="position: absolute;font-size: 24px;font-weight: 600;color: var(--text-light);user-select: none;pointer-events: none;top: 12%; right: 52%;">5</span>
+                    <span
+                        style="position: absolute;font-size: 24px;font-weight: 600;color: var(--text-light);user-select: none;pointer-events: none;bottom: 42%; left: 28%;">5</span>
+                    <span
+                        style="position: absolute;font-size: 24px;font-weight: 600;color: var(--text-light);user-select: none;pointer-events: none;top: 55%; right: 32%;">5</span>
+                    <span
+                        style="position: absolute;font-size: 24px;font-weight: 600;color: var(--text-light);user-select: none;pointer-events: none;top: 32%; left: 18%;">5</span>
+                    <span
+                        style="position: absolute;font-size: 24px;font-weight: 600;color: var(--text-light);user-select: none;pointer-events: none;bottom: 18%; right: 48%;">5</span>
+
+                    <!-- Le vrai chiffre 5 cliquable - caché dans le coin inférieur droit -->
+                    <a href="manip-05.html" class="card__number-button" style="position: absolute; bottom: 8%; right: 8%;">5</a>
+                </div>
+
+                <p class="card__help-text">
+                    Déplacez votre souris pour explorer toute la zone
+                </p>
+            </div>
+        </div>
+
+        <!-- Tips Card -->
+        <div class="card">
+            <h2 class="card__title">Conseils pour réussir</h2>
+            <div class="answers">
+                <div class="answer">
+                    <strong>✓ Prenez votre temps :</strong> Explorez méthodiquement toute la zone
+                </div>
+                <div class="answer">
+                    <strong>✓ Observez le curseur :</strong> Il devient une main uniquement sur le bon chiffre
+                </div>
+                <div class="answer">
+                    <strong>✓ Le bon 5 est orange :</strong> Les autres chiffres sont gris et non cliquables
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+
+</html>

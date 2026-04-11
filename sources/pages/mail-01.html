@@ -1,0 +1,180 @@
+﻿<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulaire - Exercice 1</title>
+    <link rel="stylesheet" href="../style/main.css">
+    
+    <link rel="shortcut icon" type="image/x-icon" href="../images/orange-logo.svg">
+</head>
+<body>
+    <!-- Header commun -->
+    <header>
+        <div class="header__inner">
+            <div class="header__left">
+                <a href="../../index.html">
+    <img src="../images/orange-logo.svg" alt="Logo Orange" class="header__logo">
+</a>
+                <h1 class="header__title">Tutoriels - Manipulation de la souris et du clavier</h1>
+            </div>
+            <div class="header__right">
+                <span class="badge">Formulaire</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <h1 class="hero__title">Apprendre à remplir un formulaire</h1>
+            <p class="hero__subtitle">
+                <strong>Objectif :</strong> Saisir vos informations personnelles dans un formulaire
+            </p>
+        </section>
+
+        <!-- Info Section -->
+        <div class="info-section">
+            <h2 class="info-section__title">💡 Qu'est-ce qu'un formulaire ?</h2>
+            <p class="info-section__text">
+                Un formulaire permet de saisir des informations (nom, adresse, etc.) sur un site web. 
+                Vous devez cliquer dans chaque zone et taper au clavier.
+            </p>
+        </div>
+
+        <!-- Grid Layout -->
+        <div class="grid">
+            <!-- Form Card -->
+            <div class="card" style="background-color: #e6fff2;">
+                <h2 class="card__title">📝 Formulaire à remplir</h2>
+                
+                <form style="margin-top: 20px;">
+                    <div style="margin-bottom: 20px;">
+                        <label for="prenom" style="display: block; margin-bottom: 8px; font-weight: bold;">
+                            Prénom :
+                        </label>
+                        <input type="text" 
+                               id="prenom" 
+                               name="prenom" 
+                               style="width: 100%; padding: 12px; border: 2px solid #ccc; border-radius: 8px; font-size: 16px;">
+                    </div>
+
+                    <div style="margin-bottom: 20px;">
+                        <label for="nom" style="display: block; margin-bottom: 8px; font-weight: bold;">
+                            Nom :
+                        </label>
+                        <input type="text" 
+                               id="nom" 
+                               name="nom" 
+                               style="width: 100%; padding: 12px; border: 2px solid #ccc; border-radius: 8px; font-size: 16px;">
+                    </div>
+
+                    <div style="margin-bottom: 20px;">
+                        <label for="adresse" style="display: block; margin-bottom: 8px; font-weight: bold;">
+                            Adresse :
+                        </label>
+                        <textarea id="adresse" 
+                                  name="adresse" 
+                                  rows="5" 
+                                  style="width: 100%; padding: 12px; border: 2px solid #ccc; border-radius: 8px; font-size: 16px; resize: vertical;"></textarea>
+                    </div>
+
+                    <div style="text-align: center;">
+                        <button type="reset" 
+                                class="btn" 
+                                style="background-color: #666; color: white; padding: 12px 24px; border: none; border-radius: 8px; cursor: pointer; font-size: 16px;">
+                            Effacer
+                        </button>
+                    </div>
+
+                    <div class="info-section" style="background-color: #fff4e6; margin-top: 20px;">
+                        <p style="margin: 0; color: #000;">
+                            <strong>ℹ️ Info :</strong> Le bouton "Effacer" efface tout le texte des zones de saisie
+                        </p>
+                    </div>
+                </form>
+            </div>
+
+            <!-- Instructions Card -->
+            <div class="card">
+                <h2 class="card__title">Instructions détaillées</h2>
+                
+                <div class="steps">
+                    <div class="step">
+                        <strong>1. Cliquer dans la zone "Prénom" :</strong><br>
+                        Cliquez dans la zone blanche à côté de <span style="color: #ff0000;">Prénom</span>. 
+                        Le trait vertical clignotant (le curseur) signifie que vous pouvez taper au clavier.
+                    </div>
+                    
+                    <div class="step">
+                        <strong>2. Taper votre prénom :</strong><br>
+                        Pour les lettres majuscules : maintenez la touche <strong style="color: #ff0000;">Maj</strong> 
+                        (majuscule) enfoncée et tapez la lettre désirée.
+                    </div>
+                    
+                    <div class="step">
+                        <strong>3. Passer au champ suivant :</strong><br>
+                        Appuyez sur la touche <strong style="color: #ff0000;">Tabulation</strong> (à gauche du clavier). 
+                        Le curseur se déplace automatiquement dans la zone "Nom".
+                    </div>
+                    
+                    <div class="step">
+                        <strong>4. Taper votre nom :</strong><br>
+                        <span style="color: #ff0000;">TOUJOURS</span> regarder le trait clignotant (curseur) 
+                        pour savoir si vous êtes placé au bon endroit.
+                    </div>
+                    
+                    <div class="step">
+                        <strong>5. Passer à l'adresse :</strong><br>
+                        Appuyez à nouveau sur <strong>Tabulation</strong>. Vérifiez que le curseur clignote dans la zone "Adresse".
+                    </div>
+                    
+                    <div class="step">
+                        <strong>6. Taper votre adresse :</strong><br>
+                        À la fin de la première ligne, appuyez sur la touche <strong style="color: #ff0000;">Entrée</strong> 
+                        (à droite du clavier) pour passer à la ligne suivante.
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Visual Aids -->
+        <div class="card" style="margin-top: 24px;">
+            <h2 class="card__title">Aide visuelle - Les touches importantes</h2>
+            
+            <div style="display: flex; justify-content: space-around; flex-wrap: wrap; gap: 20px; margin-top: 20px;">
+                <div style="text-align: center;">
+                    <img src="../images/maj.jpg" alt="Touche Majuscule" style="max-width: 150px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+                    <p style="margin-top: 8px; font-weight: bold;">Touche Majuscule</p>
+                </div>
+                
+                <div style="text-align: center;">
+                    <img src="../images/curseur.jpg" alt="Curseur" style="max-width: 150px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+                    <p style="margin-top: 8px; font-weight: bold;">Le curseur clignotant</p>
+                </div>
+                
+                <div style="text-align: center;">
+                    <img src="../images/tab.jpg" alt="Touche Tabulation" style="max-width: 150px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+                    <p style="margin-top: 8px; font-weight: bold;">Touche Tabulation</p>
+                </div>
+                
+                <div style="text-align: center;">
+                    <img src="../images/entre.jpg" alt="Touche Entrée" style="max-width: 150px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+                    <p style="margin-top: 8px; font-weight: bold;">Touche Entrée</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Navigation -->
+        <div style="text-align: center; margin-top: 32px;">
+            <p style="margin-bottom: 16px; font-size: 18px;">
+                Cliquez sur le bouton <strong style="color: #ff0000;">Suite</strong> pour continuer l'exercice
+            </p>
+            <a href="mail-02.html" class="btn btn-primary">
+                Continuer →
+            </a>
+        </div>
+    </main>
+</body>
+</html>

@@ -1,0 +1,152 @@
+﻿<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Copier-Coller - Exercice 1</title>
+    <link rel="stylesheet" href="../style/main.css">
+    
+    <link rel="shortcut icon" type="image/x-icon" href="../images/orange-logo.svg">
+</head>
+<body>
+    <!-- Header commun -->
+    <header>
+        <div class="header__inner">
+            <div class="header__left">
+                <a href="../../index.html">
+    <img src="../images/orange-logo.svg" alt="Logo Orange" class="header__logo">
+</a>
+                <h1 class="header__title">Tutoriels - Manipulation de la souris et du clavier</h1>
+            </div>
+            <div class="header__right">
+                <span class="badge">Copier-Coller</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <h1 class="hero__title">Apprendre le Copier / Coller</h1>
+            <p class="hero__subtitle">
+                <strong>Objectif :</strong> Copier les réponses de la colonne de droite et les coller dans les questions correspondantes à gauche
+            </p>
+        </section>
+
+        <!-- Info Section -->
+        <div class="info-section">
+            <h2 class="info-section__title">💡 Comment faire ?</h2>
+            <p class="info-section__text">
+                Le copier-coller permet de dupliquer du texte d'un endroit à un autre sans avoir à le retaper.
+            </p>
+        </div>
+
+        <!-- Grid Layout -->
+        <div class="grid">
+            <!-- Instructions Card - Copier -->
+            <div class="card">
+                <h2 class="card__title">1️⃣ Copier les réponses</h2>
+                
+                <div class="steps">
+                    <div class="step">
+                        <strong>Sélectionner le texte :</strong><br>
+                        Dans la colonne de droite, cliquez sur une réponse :
+                        <ul style="margin-top: 8px;">
+                            <li><strong>2 clics</strong> pour sélectionner 1 mot</li>
+                            <li><strong>3 clics</strong> pour sélectionner 1 ligne</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="step">
+                        <strong>Copier :</strong><br>
+                        Faites un <strong>clic droit</strong> sur le mot sélectionné, puis cliquez sur <strong style="color: #ff0000;">Copier</strong> dans le menu qui apparaît.
+                    </div>
+                </div>
+            </div>
+
+            <!-- Instructions Card - Coller -->
+            <div class="card">
+                <h2 class="card__title">2️⃣ Coller les réponses</h2>
+                
+                <div class="steps">
+                    <div class="step">
+                        <strong>Positionner le curseur :</strong><br>
+                        Cliquez dans la case blanche à côté de la question (colonne de gauche). Vérifiez que le curseur clignotant apparaît bien dans la case.
+                    </div>
+                    
+                    <div class="step">
+                        <strong>Coller :</strong><br>
+                        Faites un <strong>clic droit</strong> dans la case, puis cliquez sur <strong style="color: #ff0000;">Coller</strong> dans le menu qui apparaît.
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Exercise Section -->
+        <div class="grid" style="margin-top: 24px;">
+            <!-- Questions Card -->
+            <div class="card" style="background-color: #e6f7ff;">
+                <h2 class="card__title" style="color: #003399;">📝 Questions</h2>
+                
+                <div class="answers">
+                    <div class="answer">
+                        <label for="q1"><strong>A.</strong> Qu'êtes-vous en train d'apprendre à utiliser ? Une</label>
+                        <input type="text" id="q1" name="q1" style="width: 100%; padding: 8px; margin-top: 8px; border: 2px solid #ccc; border-radius: 4px;">
+                    </div>
+                    
+                    <div class="answer">
+                        <label for="q2"><strong>B.</strong> Qu'utilisons-nous pour imprimer un document ? Une</label>
+                        <input type="text" id="q2" name="q2" style="width: 100%; padding: 8px; margin-top: 8px; border: 2px solid #ccc; border-radius: 4px;">
+                    </div>
+                    
+                    <div class="answer">
+                        <label for="q3"><strong>C.</strong> Pour lire nous lisons sur un</label>
+                        <input type="text" id="q3" name="q3" style="width: 100%; padding: 8px; margin-top: 8px; border: 2px solid #ccc; border-radius: 4px;">
+                    </div>
+                    
+                    <div class="answer">
+                        <label for="q4"><strong>D.</strong> Pour écrire nous utilisons le... ?</label>
+                        <input type="text" id="q4" name="q4" style="width: 100%; padding: 8px; margin-top: 8px; border: 2px solid #ccc; border-radius: 4px;">
+                    </div>
+                    
+                    <div class="answer">
+                        <label for="q5"><strong>E.</strong> Le travail est conservé dans le... ?</label>
+                        <input type="text" id="q5" name="q5" style="width: 100%; padding: 8px; margin-top: 8px; border: 2px solid #ccc; border-radius: 4px;">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Answers Card -->
+            <div class="card" style="background-color: #fff4e6;">
+                <h2 class="card__title" style="color: #003399;">✅ Réponses</h2>
+                
+                <div class="answers">
+                    <div class="answer" style="padding: 12px; background: white; border-radius: 8px; margin-bottom: 12px; border: 2px solid #ff7900;">
+                        souris
+                    </div>
+                    <div class="answer" style="padding: 12px; background: white; border-radius: 8px; margin-bottom: 12px; border: 2px solid #ff7900;">
+                        imprimante
+                    </div>
+                    <div class="answer" style="padding: 12px; background: white; border-radius: 8px; margin-bottom: 12px; border: 2px solid #ff7900;">
+                        écran
+                    </div>
+                    <div class="answer" style="padding: 12px; background: white; border-radius: 8px; margin-bottom: 12px; border: 2px solid #ff7900;">
+                        clavier
+                    </div>
+                    <div class="answer" style="padding: 12px; background: white; border-radius: 8px; margin-bottom: 12px; border: 2px solid #ff7900;">
+                        disque dur
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Navigation -->
+        <div style="text-align: center; margin-top: 32px;">
+            <a href="copier-coller-02.html" class="btn btn-primary">
+                Continuer →
+            </a>
+        </div>
+    </main>
+</body>
+</html>

@@ -1,0 +1,145 @@
+﻿<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Le Clavier - Exercice 1</title>
+    <link rel="stylesheet" href="../style/main.css">
+    
+    <link rel="shortcut icon" type="image/x-icon" href="../images/orange-logo.svg">
+</head>
+
+<body>
+    <!-- Header commun -->
+    <header>
+        <div class="header__inner">
+            <div class="header__left">
+                <a href="../../index.html">
+                    <img src="../images/orange-logo.svg" alt="Logo Orange" class="header__logo">
+                </a>
+                <h1 class="header__title">Tutoriels - Manipulation de la souris et du clavier</h1>
+            </div>
+            <div class="header__right">
+                <span class="badge">Le Clavier</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <h1 class="hero__title">Découvrir les zones du clavier</h1>
+            <p class="hero__subtitle">
+                <strong>Objectif :</strong> Comprendre l'organisation du clavier en 4 zones principales
+            </p>
+        </section>
+
+        <!-- Keyboard Image -->
+        <div class="card">
+            <div style="text-align: center; margin-bottom: 24px;">
+                <img src="../images/clavier4zones.jpg" alt="Clavier avec 4 zones colorées"
+                    style="max-width: 100%; height: auto; border-radius: 10px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
+            </div>
+        </div>
+
+        <!-- Grid Layout -->
+        <div class="grid">
+            <!-- Zone Bleue -->
+            <div class="card" style="border-left: 4px solid #3333CC;">
+                <h2 class="card__title" style="color: #3333CC;">🔵 Zone des numériques</h2>
+                <p style="margin-bottom: 16px;">
+                    Cette zone se trouve <strong>à droite du clavier</strong>. Elle contient :
+                </p>
+                <ul style="margin-left: 20px; line-height: 1.8;">
+                    <li>Les chiffres de <strong>0 à 9</strong></li>
+                    <li>Les signes pour les calculs :</li>
+                </ul>
+                <div
+                    style="background: #f0f0f0; padding: 16px; border-radius: 8px; margin-top: 12px; text-align: center;">
+                    <span style="font-size: 24px; color: #ff0000; font-weight: bold; margin: 0 8px;">+</span>
+                    <span style="font-size: 24px; color: #ff0000; font-weight: bold; margin: 0 8px;">-</span>
+                    <span style="font-size: 24px; color: #ff0000; font-weight: bold; margin: 0 8px;">*</span>
+                    <span style="font-size: 24px; color: #ff0000; font-weight: bold; margin: 0 8px;">/</span>
+                </div>
+                <p style="margin-top: 12px; font-size: 14px; color: #666;">
+                    Addition (+) • Soustraction (-) • Multiplication (*) • Division (/)
+                </p>
+            </div>
+
+            <!-- Zone Verte -->
+            <div class="card" style="border-left: 4px solid #006633;">
+                <h2 class="card__title" style="color: #006633;">🟢 Zone des flèches de direction</h2>
+                <p style="margin-bottom: 16px;">
+                    Cette zone se trouve <strong>entre le clavier principal et le pavé numérique</strong>.
+                </p>
+                <div style="background: #f0f0f0; padding: 20px; border-radius: 8px; text-align: center;">
+                    <div style="display: flex; flex-direction: column; align-items: center; gap: 8px;">
+                        <div style="display: flex; gap: 8px;">
+                            <span style="font-size: 32px;">↑</span>
+                        </div>
+                        <div style="display: flex; gap: 8px;">
+                            <span style="font-size: 32px;">←</span>
+                            <span style="font-size: 32px;">↓</span>
+                            <span style="font-size: 32px;">→</span>
+                        </div>
+                    </div>
+                    <p style="margin-top: 16px;">
+                        Ces flèches permettent de <strong>déplacer le curseur</strong> dans un texte sans utiliser la
+                        souris.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Grid Layout - Row 2 -->
+            <div class="grid">
+                <!-- Zone Jaune -->
+                <div class="card" style="border-left: 4px solid #FF9900;">
+                    <h2 class="card__title" style="color: #FF9900;">🟡 Zone des touches de fonction</h2>
+                    <p style="margin-bottom: 16px;">
+                        Cette zone se trouve <strong>en haut du clavier</strong>. Elle contient les touches :
+                    </p>
+                    <div style="background: #f0f0f0; padding: 16px; border-radius: 8px; text-align: center;">
+                        <span style="font-weight: bold; margin: 0 4px;">F1</span>
+                        <span style="font-weight: bold; margin: 0 4px;">F2</span>
+                        <span style="font-weight: bold; margin: 0 4px;">F3</span>
+                        <span style="font-weight: bold; margin: 0 4px;">...</span>
+                        <span style="font-weight: bold; margin: 0 4px;">F12</span>
+                    </div>
+                    <p style="margin-top: 12px; font-size: 14px; color: #666;">
+                        Ces touches ont des fonctions spéciales selon les logiciels utilisés.
+                    </p>
+                </div>
+
+                <!-- Zone Rouge -->
+                <div class="card" style="border-left: 4px solid #FF0000;">
+                    <h2 class="card__title" style="color: #FF0000;">🔴 Zone des caractères</h2>
+                    <p style="margin-bottom: 16px;">
+                        C'est la <strong>zone principale</strong> du clavier. Elle contient :
+                    </p>
+                    <ul style="margin-left: 20px; line-height: 1.8;">
+                        <li>Les <strong>lettres</strong> de A à Z</li>
+                        <li>Les <strong>chiffres</strong> de 0 à 9 (en haut)</li>
+                        <li>Les <strong>signes de ponctuation</strong> : . , ; : ! ?</li>
+                        <li>Les <strong>caractères spéciaux</strong> : @ # € & etc.</li>
+                    </ul>
+                    <p style="margin-top: 12px; background: #fff4e6; padding: 12px; border-radius: 8px;">
+                        <strong>💡 Astuce :</strong> C'est la zone que vous utiliserez le plus pour écrire du texte.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Navigation -->
+            <div style="text-align: center; margin-top: 32px;">
+                <p style="margin-bottom: 16px; font-size: 18px;">
+                    Cliquez sur le bouton <strong style="color: #ff0000;">Suite</strong> pour continuer
+                </p>
+                <a href="clavier-02.html" class="btn btn-primary">
+                    Continuer →
+                </a>
+            </div>
+    </main>
+</body>
+
+</html>

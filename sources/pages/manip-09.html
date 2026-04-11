@@ -1,0 +1,114 @@
+﻿<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manipuler la souris - Exercice 9</title>
+    <link rel="stylesheet" href="../style/main.css">    
+    <link rel="shortcut icon" type="image/x-icon" href="../images/orange-logo.svg">
+</head>
+
+<body>
+    <!-- Header commun -->
+    <header>
+        <div class="header__inner">
+            <div class="header__left">
+                <a href="../../index.html">
+                    <img src="../images/orange-logo.svg" alt="Logo Orange" class="header__logo">
+                </a>
+                <h1 class="header__title">Tutoriels - Manipulation de la souris et du clavier</h1>
+            </div>
+            <div class="header__right">
+                <span class="badge">Manip' 9</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <h1 class="hero__title">🔍 Cherchez le chiffre caché !</h1>
+            <p class="hero__subtitle">
+                <strong>Défi :</strong> Trouvez le chiffre <strong>10</strong> et
+                cliquez dessus
+            </p>
+        </section>
+
+        <!-- Info Section -->
+        <div class="info-section">
+            <h2 class="info-section__title">📖 Découverte du patrimoine</h2>
+            <p class="info-section__text">
+                Lisez attentivement les trois textes ci-dessous. Le chiffre 10 est caché quelque part dans l'un d'eux !
+            </p>
+        </div>
+
+        <!-- Content Cards with Historical Texts -->
+        <div class="grid" style="grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));">
+
+            <!-- Card 1: Le Lavoir -->
+            <div class="card">
+                <h2 class="card__title">🏛️ Le Lavoir ancien</h2>
+                <img src="../images/lavoir.jpg" alt="Le Lavoir" class="card__image" style="">
+                <div class="answer">
+                    C'est le plus ancien des trois lavoirs de la ville. Dès 1661, la fontaine fit l'objet de réparations
+                    de la part des consuls et une pierre gravée de leurs noms et des armoiries du seigneur marquis de
+                    Valence fut érigée au-dessus de la fontaine. En 1880, le mauvais état du lavoir nécessita des
+                    réparations, le Conseil Municipal de l'époque décida notamment qu'il devait être carrelé.
+                </div>
+            </div>
+
+            <!-- Card 2: La Place Nationale -->
+            <div class="card">
+                <h2 class="card__title">🏰 La Place Nationale</h2>
+                <img src="../images/place_nationale.jpg" alt="Place Nationale" class="card__image">
+                <div class="answer">
+                    Cette place carrée, entourée primitivement de maisons à ambans était le cœur de la bastide. En son
+                    centre fut construite la maison commune entourée elle-même d'ambans sous lesquels les marchands
+                    étalaient leurs marchandises les jours de marchés.
+                </div>
+            </div>
+
+            <!-- Card 3: Les Allées des Fontaines (avec le 10 caché) -->
+            <div class="card">
+                <h2 class="card__title">⛲ Les Allées des Fontaines</h2>
+                <img src="../images/allees_fontaines.jpg" alt="Allées des Fontaines" class="card__image">
+                <div class="answer">
+                    C'est sur l'emplacement des anciens fossés de la ville que l'on établit la belle promenade des
+                    fontaines.
+                    <a href="manip-10.html"
+                        style="color: var(--brand-orange); font-weight: bold; text-decoration: underline;">10</a>
+                    Pour y accéder plus commodément, on perça une quatrième porte de ville à proximité de la place
+                    centrale, à l'extrémité de la rue qui, depuis lors, a toujours porté le nom de Porte-Neuve.
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Tips Card -->
+        <div class="card">
+            <h2 class="card__title">Conseils pour réussir</h2>
+            <div class="answers">
+                <div class="answer">
+                    <strong>Lecture attentive :</strong> Prenez le temps de lire chaque texte en entier
+                </div>
+                <div class="answer">
+                    <strong>Observation visuelle :</strong> Le chiffre 10 se distingue du reste du texte
+                </div>
+                <div class="answer">
+                    <strong>Survol à la souris :</strong> Passez la souris sur les zones de texte pour détecter les
+                    liens
+                </div>
+                <div class="answer">
+                    <strong>Changement de curseur :</strong> Le curseur devient une main pointeuse sur le lien cliquable
+                </div>
+                <div class="answer">
+                    <strong>Clic précis :</strong> Une fois le 10 trouvé, cliquez dessus pour continuer
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+
+</html>

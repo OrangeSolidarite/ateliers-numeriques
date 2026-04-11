@@ -1,0 +1,120 @@
+﻿<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu déroulant - Exercice 1</title>
+    <link rel="stylesheet" href="../style/main.css">
+    
+    <link rel="shortcut icon" type="image/x-icon" href="../images/orange-logo.svg">
+</head>
+<body>
+    <!-- Header commun -->
+    <header>
+        <div class="header__inner">
+            <div class="header__left">
+                <a href="../../index.html">
+    <img src="../images/orange-logo.svg" alt="Logo Orange" class="header__logo">
+</a>
+                <h1 class="header__title">Tutoriels - Manipulation de la souris et du clavier</h1>
+            </div>
+            <div class="header__right">
+                <span class="badge">Menu déroulant</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <h1 class="hero__title">Apprendre à utiliser un menu déroulant</h1>
+            <p class="hero__subtitle">
+                <strong>Objectif :</strong> Sélectionner le chiffre <strong style="color: #ff0000;">3</strong> dans le menu déroulant
+            </p>
+        </section>
+
+        <!-- Info Section -->
+        <div class="info-section">
+            <h2 class="info-section__title">💡 Qu'est-ce qu'un menu déroulant ?</h2>
+            <p class="info-section__text">
+                Un menu déroulant permet de choisir une option parmi plusieurs. 
+                Il économise de l'espace en affichant les choix uniquement quand on clique dessus.
+            </p>
+        </div>
+
+        <!-- Grid Layout -->
+        <div class="grid">
+            <!-- Menu Card -->
+            <div class="card" style="background-color: #fff4e6;">
+                <h2 class="card__title">Menu déroulant</h2>
+                
+                <div style="text-align: center; margin: 30px 0;">
+                    <form name="form">
+                        <select name="site" 
+                                size="1" 
+                                onchange="if(this.value === 'deplacement-03.html') window.location.href = this.value;"
+                                style="width: 200px; padding: 12px; font-size: 18px; border: 2px solid #ff7900; border-radius: 8px; background: white;">
+                            <option value="">Cliquez ici ▼</option>
+                            <option value="erreur.html">18</option>
+                            <option value="erreur.html">19</option>
+                            <option value="erreur.html">20</option>
+                            <option value="erreur.html">21</option>
+                            <option value="deplacement-03.html">3</option>
+                        </select>
+                    </form>
+                </div>
+
+                <div class="info-section" style="background-color: #e6f7ff; margin-top: 20px;">
+                    <p style="margin: 0; color: #000;">
+                        <strong>👆 Cliquez sur la petite flèche noire</strong> pour ouvrir la liste de choix
+                    </p>
+                </div>
+            </div>
+
+            <!-- Instructions Card -->
+            <div class="card">
+                <h2 class="card__title">Instructions</h2>
+                
+                <div class="steps">
+                    <div class="step">
+                        <strong>1. Ouvrir le menu :</strong><br>
+                        Cliquez sur la petite flèche noire à droite du menu. Une liste de nombres va s'afficher.
+                    </div>
+                    
+                    <div class="step">
+                        <strong>2. Parcourir la liste :</strong><br>
+                        Déplacez votre souris dans la liste déroulante jusqu'à ce que le chiffre <strong style="color: #ff0000;">3</strong> apparaisse en blanc sur fond bleu.
+                    </div>
+                    
+                    <div class="step">
+                        <strong>3. Sélectionner :</strong><br>
+                        Cliquez <strong>bien sur le chiffre 3</strong>, pas à côté. Soyez précis !
+                    </div>
+                    
+                    <div class="step">
+                        <strong>4. Validation :</strong><br>
+                        Si vous avez cliqué sur le bon chiffre, vous passerez automatiquement à la page suivante.
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Tips Card -->
+        <div class="card" style="margin-top: 24px;">
+            <h2 class="card__title">Astuces</h2>
+            <div class="answers">
+                <div class="answer">
+                    <strong>⚠️ Attention :</strong> Si vous cliquez sur un autre nombre, vous serez redirigé vers une page d'erreur
+                </div>
+                <div class="answer">
+                    <strong>💡 Conseil :</strong> Prenez votre temps pour bien viser le chiffre 3
+                </div>
+                <div class="answer">
+                    <strong>🔄 Recommencer :</strong> Si vous vous trompez, utilisez le bouton "Retour" de votre navigateur
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
