@@ -5,29 +5,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Manipuler la souris - Exercice 4</title>
-    <link rel="stylesheet" href="../style/main.css">    
+    <link rel="stylesheet" href="../style/main.css">
     <link rel="shortcut icon" type="image/x-icon" href="../images/orange-logo.svg">
 </head>
 
 <body>
-    <!-- Header commun -->
     <header>
-        <div class="header__inner">
-            <div class="header__left">
+        <div class="header-inner">
+            <div class="header-left">
                 <a href="../../index.html">
                     <img src="../images/orange-logo.svg" alt="Logo Orange">
                 </a>
                 <h1>Tutoriels - Manipulation de la souris et du clavier</h1>
             </div>
-            <div class="header__right">
-                <span class="badge">Manipulation 4</span>
+            <div class="header-right">
+                <span class="tag">Manipulation 4</span>
             </div>
         </div>
     </header>
 
-    <!-- Main Content -->
     <main>
-        <!-- Hero Section -->
         <section class="hero">
             <h1>Trouvez le chiffre caché</h1>
             <p>
@@ -35,7 +32,6 @@
             </p>
         </section>
 
-        <!-- Info Section -->
         <div class="info-section">
             <h3>🎯 Nouveau défi</h3>
             <p>
@@ -44,9 +40,7 @@
             </p>
         </div>
 
-        <!-- Grid Layout -->
         <div class="grid">
-            <!-- Instructions Card -->
             <div class="card">
                 <h3>Instructions</h3>
 
@@ -73,23 +67,13 @@
                         sur le bouton gauche de la souris.
                     </div>
                 </div>
-
-                <div
-                    style="margin-top: 12px; padding: 8px; background-color: #e3f2fd; border-left: 4px solid #2196f3; border-radius: 8px;">
-                    <strong style="color: #1976d2;">💡 Astuce :</strong>
-                    <span style="color: #1565c0; font-size: 13px;">
-                        Explorez bien tous les coins de la zone !
-                    </span>
-                </div>
             </div>
 
-            <!-- Search Area Card -->
             <div class="card">
                 <h3>Zone de recherche</h3>
 
                 <div
-                    style="position: relative; min-height: 400px; background: linear-gradient(135deg, #fff3e6 0%, #ffe0b2 100%);border-radius: var(--radius-md);padding: var(--spacing-lg);margin: var(--spacing-md) 0;">
-                    <!-- Chiffres leurres - disposition aléatoire -->
+                    style="position: relative; min-height: 250px; background: var(--lighter-pink); padding: var(--spacing-l); ">
                     <span
                         style="position: absolute;font-size: 24px;font-weight: 600;color: var(--text-light);user-select: none;pointer-events: none;top: 18%; left: 12%;">3</span>
                     <span
@@ -111,7 +95,6 @@
                     <span
                         style="position: absolute;font-size: 24px;font-weight: 600;color: var(--text-light);user-select: none;pointer-events: none;bottom: 58%; right: 18%;">7</span>
 
-                    <!-- Faux 5 (leurres) - disposition aléatoire -->
                     <span
                         style="position: absolute;font-size: 24px;font-weight: 600;color: var(--text-light);user-select: none;pointer-events: none;top: 12%; right: 52%;">5</span>
                     <span
@@ -123,17 +106,16 @@
                     <span
                         style="position: absolute;font-size: 24px;font-weight: 600;color: var(--text-light);user-select: none;pointer-events: none;bottom: 18%; right: 48%;">5</span>
 
-                    <!-- Le vrai chiffre 5 cliquable - caché dans le coin inférieur droit -->
-                    <a href="manip-05.html" class="card__number-button" style="position: absolute; bottom: 8%; right: 8%;">5</a>
+                    <a href="manip-05.html" class="btn btn-primary"
+                        style="position: absolute; bottom: 8%; right: 8%;">5</a>
                 </div>
 
-                <p class="card__help-text">
+                <p class="card-help-text">
                     Déplacez votre souris pour explorer toute la zone
                 </p>
             </div>
         </div>
 
-        <!-- Tips Card -->
         <div class="card">
             <h3>Conseils pour réussir</h3>
             <div class="answers">

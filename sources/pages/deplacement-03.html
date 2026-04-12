@@ -8,26 +8,26 @@
   <link rel="stylesheet" href="../style/main.css">
   <link rel="shortcut icon" type="image/x-icon" href="../images/orange-logo.svg">
   <style>
-    .scroll__grid {
+    .scroll-grid {
       display: flex;
       flex-direction: row;
       overflow-x: scroll;
       overflow-y: hidden;
-      gap: var(--space-xl);
-      padding: var(--space-md);
+      gap: var(--spacing-xl);
+      padding: var(--spacing-m);
       scroll-behavior: auto;
-      margin-bottom: var(--space-md);
+      margin-bottom: var(--spacing-m);
     }
 
-    .scroll__item {
+    .scroll-item {
       display: flex;
       flex-direction: column;
       align-items: center;
-      gap: var(--space-sm);
+      gap: var(--spacing-s);
       flex-shrink: 0;
     }
 
-    .scroll__item img {
+    .scroll-item img {
       max-width: 100%;
       width: auto;
       height: 200px;
@@ -37,15 +37,15 @@
 
 <body>
   <header>
-    <div class="header__inner">
-      <div class="header__left">
+    <div class="header-inner">
+      <div class="header-left">
         <a href="../../index.html">
           <img src="../images/orange-logo.svg" alt="Logo Orange">
         </a>
         <h1>Tutoriels - Manipulation de la souris et du clavier</h1>
       </div>
-      <div class="header__right">
-        <span class="badge">Déplacement 3</span>
+      <div class="header-right">
+        <span class="tag">Déplacement 3</span>
       </div>
     </div>
   </header>
@@ -96,41 +96,41 @@
         <img src="../images/barre_defilement.png" alt="Curseur de défilement" style="max-width: 75%;">
         <img src="../images/fermeture_eclair.png" alt="Fermeture éclair" style="max-width: 25%;">
 
-        <p class="card__help-text">Le curseur fonctionne comme une fermeture éclair, mais à l'horizontale</p>
+        <p class="card-help-text">Le curseur fonctionne comme une fermeture éclair, mais à l'horizontale</p>
       </div>
     </div>
 
     <div class="card">
       <h2>Faites défiler vers la droite pour trouver les 7 oiseaux, puis revenez au début</h2>
 
-      <div class="scroll__grid">
-        <div class="scroll__item">
+      <div class="scroll-grid">
+        <div class="scroll-item">
           <img src="../images/oiseau-01.png" alt="Oiseau 1">
-          <span class="card__number">1</span>
+          <span class="sticker">1</span>
         </div>
-        <div class="scroll__item">
+        <div class="scroll-item">
           <img src="../images/oiseau-02.png" alt="Oiseau 2">
-          <span class="card__number">2</span>
+          <span class="sticker">2</span>
         </div>
-        <div class="scroll__item">
+        <div class="scroll-item">
           <img src="../images/oiseau-03.png" alt="Oiseau 3">
-          <span class="card__number">3</span>
+          <span class="sticker">3</span>
         </div>
-        <div class="scroll__item">
+        <div class="scroll-item">
           <img src="../images/oiseau-04.png" alt="Oiseau 4">
-          <span class="card__number">4</span>
+          <span class="sticker">4</span>
         </div>
-        <div class="scroll__item">
+        <div class="scroll-item">
           <img src="../images/oiseau-05.png" alt="Oiseau 5">
-          <span class="card__number">5</span>
+          <span class="sticker">5</span>
         </div>
-        <div class="scroll__item">
+        <div class="scroll-item">
           <img src="../images/oiseau-06.png" alt="Oiseau 6">
-          <span class="card__number">6</span>
+          <span class="sticker">6</span>
         </div>
-        <div class="scroll__item">
+        <div class="scroll-item">
           <img src="../images/oiseau-07.png" alt="Oiseau 7">
-          <span class="card__number">7</span>
+          <span class="sticker">7</span>
         </div>
       </div>
 

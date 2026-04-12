@@ -1,89 +1,197 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
-<html>
-<!-- Mirrored from annie.clic.free.fr/page22.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 22 Feb 2026 14:59:23 GMT -->
-<head><!-- saved from url=(0040)http://www.3street.org/mouse/page22.html -->
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Se déplacer - Exercice 5</title>
+  <link rel="stylesheet" href="../style/main.css">
+  <link rel="shortcut icon" type="image/x-icon" href="../images/orange-logo.svg">
+  <style>
+    .dropdown {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: var(--spacing-s);
+      max-width: 420px;
+    }
+
+    .dropdown label {
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--text-primary);
+    }
+
+    .dropdown select {
+      width: 100%;
+      min-height: 48px;
+      padding: 12px 44px 12px 16px;
+      border: 2px solid var(--core-black);
+      border-radius: 0;
+      background-color: var(--core-white);
+      color: var(--text-primary);
+      font-size: 16px;
+      font-family: inherit;
+      line-height: 1.4;
+      appearance: none;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      cursor: pointer;
+      transition: var(--transition);
+    }
+
+    .dropdown select:hover {}
+
+    .dropdown select:focus {}
+
+    .dropdown select::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      right: 16px;
+      width: 10px;
+      height: 10px;
+      border-right: 2px solid var(--core-black);
+      border-bottom: 2px solid var(--core-black);
+      transform: translateY(-65%) rotate(45deg);
+      pointer-events: none;
+    }
+
+    .feedback {
+      display: none;
+      width: 100%;
+      padding: var(--spacing-s) var(--spacing-m);
+      font-size: 14px;
+      font-weight: 700;
+      line-height: 1.4;
+    }
+
+    .feedback.success {
+      background-color: #e8f5e9;
+      border: 1px solid #2e7d32;
+      color: #1b5e20;
+    }
+
+    .feedback.error {
+      background-color: #fdecea;
+      border: 1px solid #d32f2f;
+      color: #b71c1c;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="header-inner">
+      <div class="header-left">
+        <a href="../../index.html">
+          <img src="../images/orange-logo.svg" alt="Logo Orange">
+        </a>
+        <h1>Tutoriels - Manipulation de la souris et du clavier</h1>
+      </div>
+      <div class="header-right">
+        <span class="tag">Déplacement 5</span>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <h1>S'entraîner avec un menu déroulant</h1>
+      <p>
+        <strong>Objectif :</strong> Ouvrir le menu déroulant et sélectionner le chiffre
+        <strong>3</strong>
+      </p>
+    </section>
+
+    <div class="info-section">
+      <h3>💡 Conseil important</h3>
+      <p>
+        Cliquez sur la <strong>petite flèche</strong> du menu pour ouvrir la liste.
+        Faites défiler jusqu'à voir le chiffre <strong style="color: #856404">3</strong>,
+        puis cliquez précisément dessus.
+      </p>
+    </div>
+
+    <div class="grid">
+      <div class="card">
+        <h3>Comment utiliser un menu déroulant</h3>
+        <div class="steps">
+          <div class="step">
+            <strong>Étape 1 — Ouvrir le menu :</strong><br>
+            Cliquez sur la flèche à droite du champ pour afficher la liste des choix.
+          </div>
+          <div class="step">
+            <strong>Étape 2 — Faire défiler :</strong><br>
+            Descendez dans la liste jusqu'à ce que le chiffre <strong>3</strong> apparaisse.
+          </div>
+          <div class="step">
+            <strong>Étape 3 — Sélectionner :</strong><br>
+            Cliquez bien sur le chiffre <strong>3</strong>.
+          </div>
+          <div class="step">
+            <strong>Astuce :</strong><br>
+            Prenez votre temps. Le bon geste vient avec l'entraînement.
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <h2>Sélectionnez le chiffre 3 dans le menu déroulant</h2>
+
+        <div class="dropdown">
+          <label for="menu-deroulant" class="dropdown-label">Choix</label>
+
+          <div class="ods-select">
+            <select id="menu-deroulant" onchange="verifierChoix(this)">
+              <option value="">Ceci est un menu déroulant.</option>
+              <option value="erreur">18</option>
+              <option value="erreur">19</option>
+              <option value="erreur">20</option>
+              <option value="erreur">21</option>
+              <option value="succes">3</option>
+            </select>
+          </div>
+
+          <p class="card-help-text">
+            Ouvrez la liste et choisissez le chiffre <strong>3</strong>.
+          </p>
+
+          <div id="feedback-success" class="feedback success">
+            Bravo, le chiffre 3 a bien été sélectionné.
+          </div>
+
+          <div id="feedback-error" class="feedback error">
+            Ce n'est pas le bon chiffre. Essayez encore.
+          </div>
+        </div>
+
+        <a href="deplacement-06.html" class="btn btn-primary" id="btn-suite" style="display: none;">Suite</a>
+      </div>
+    </div>
 
 
+  </main>
 
-<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<meta name="GENERATOR" content="Microsoft FrontPage 4.0"><title>Manipuler la souris</title>
+  <script>
+    function verifierChoix(select) {
+      const valeur = select.value;
+      const feedbackSuccess = document.getElementById('feedback-success');
+      const feedbackError = document.getElementById('feedback-error');
+      const btnSuite = document.getElementById('btn-suite');
 
-<style type="text/css">
-<!--
-.Style1 {font-size: 36px}
-.Style2 {
-	color: #FF0000;
-	font-weight: bold;
-}
-.Style4 {color: #FF0000; font-weight: bold; font-size: 24px; }
--->
-</style></head><body bgcolor="#ffffff">
-<script language="JavaScript">
+      feedbackSuccess.style.display = 'none';
+      feedbackError.style.display = 'none';
+      btnSuite.style.display = 'none';
 
-<!-- Original: Alex Tu <boudha1@hotmail.com> -->
-<!-- Web Site:  http://www.geocities.com/MadisonAvenue/4368 -->
-
-<!-- This script and many more are available free online at -->
-<!-- The JavaScript Source!! http://javascript.internet.com -->
-
-<!-- Begin
-function formHandler(form){
-var URL = form.site.options[form.site.selectedIndex].value;
-window.location.href = URL;
-// End -->
-}
-</script><div align="center">
-  <center>
-
-<table border="0">
-<tbody>    <tr>
-          <td colspan="3" valign="top"><table border="0" width="100%">
-            <tbody><tr align="center" valign="middle">
-              <td><img src="images/calvier.jpg" height="86" width="130"></td>
-              <td><img src="images/formation7.jpg" height="100" width="96"></td>
-              <td><img src="images/formation18.jpg" height="86" width="130"></td>
-              <td><img src="images/ateliers3.html" height="86" width="130"></td>
-              <td><img src="images/2006-nov-atelier-aines-(9).jpg" height="97" width="130"></td>
-              <td><img src="images/de1.jpg" height="100" width="62"></td>
-            </tr>
-          </tbody></table>
-            <p class="Style1" align="center"></p>            
-          </td>
-    </tr>
-    <tr>
-        <td bgcolor="#ffff99" valign="top">        <br>
-        <form name="form">
-            <p align="center">
-              <select name="site" size="1" onchange="formHandler(this.form)">
-                <option value="">Ceci est un menu d�roulant.</option>
-                <option value="erreur.html" selected="selected">18</option>
-                <option value="erreur.html">19</option>
-                <option value="erreur.html">20</option>
-                <option value="erreur.html">21</option>
-                <option value="page23.html">3</option>
-                </select>
-</p>
-        </form>
-        <p><font size="4">Ceci est un "<span class="Style2">menu d�roulant</span>" cliquer sur la petite fl�che noire elle vous permettra d'ouvrir une liste de choix </font></p>
-        <p>&nbsp;</p>
-        <p>&nbsp;</p>
-        <ol>
-          <li><font size="4"> Une liste de nombres va s'afficher</font></li>
-            <li><font size="4">D�placez-vous dans la liste d�roulante
-                jusqu'� ce que
-                "</font><span class="Style4">3</span><font size="4">" apparaisse en
-                blanc sur fond bleu </font></li>
-            <li><font size="4">Cliquez <strong>bien</strong> sur le chiffre 3, pas � c�t�, soyez pr�cis</font></li>
-            </ol>
-        </td>
-    </tr>
-    <tr>
-      <td valign="top">&nbsp;</td>
-    </tr>
-</tbody></table>
-<!-- Script Size:  1.20 KB  -->
-</center></div>
-
+      if (valeur === 'succes') {
+        feedbackSuccess.style.display = 'block';
+        btnSuite.style.display = 'inline-flex';
+      } else if (valeur === 'erreur') {
+        feedbackError.style.display = 'block';
+      }
+    }
+  </script>
 </body>
-<!-- Mirrored from annie.clic.free.fr/page22.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 22 Feb 2026 14:59:23 GMT -->
+
 </html>

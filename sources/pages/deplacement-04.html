@@ -10,7 +10,7 @@
   <style>
     .scroll-zone {
       overflow: auto;
-      margin-bottom: var(--space-md);
+      margin-bottom: var(--spacing-m);
     }
 
     .scroll-table {
@@ -19,13 +19,13 @@
     }
 
     .scroll-table td {
-      padding: var(--space-sm);
+      padding: var(--spacing-s);
       text-align: center;
       vertical-align: middle;
       align-items: center;
     }
 
-    .scroll-table .card__number {
+    .scroll-table .sticker {
       margin: 0 auto;
     }
 
@@ -33,7 +33,7 @@
       height: 200px;
       width: 300px;
       max-width: 100%;
-      border-radius: var(--radius-md);
+      border-radius: var(--radius);
       object-fit: cover;
       display: block;
       margin: 0 auto;
@@ -41,13 +41,11 @@
 
     .scroll-table .hint-box {
       width: 300px;
-      background: #fff8e1;
-      border: 2px solid #f0c040;
-      border-radius: var(--radius-md);
-      padding: var(--space-md);
+      background: var(--lighter-yellow);
+      border: 2px solid var(--darker-yellow);
+      padding: var(--spacing-m);
+      border-radius: var(--radius);
       font-size: 14px;
-      color: #856404;
-      line-height: 1.6;
       text-align: center;
     }
   </style>
@@ -55,15 +53,15 @@
 
 <body>
   <header>
-    <div class="header__inner">
-      <div class="header__left">
+    <div class="header-inner">
+      <div class="header-left">
         <a href="../../index.html">
           <img src="../images/orange-logo.svg" alt="Logo Orange">
         </a>
         <h1>Tutoriels - Manipulation de la souris et du clavier</h1>
       </div>
-      <div class="header__right">
-        <span class="badge">Déplacement 4</span>
+      <div class="header-right">
+        <span class="tag">Déplacement 4</span>
       </div>
     </div>
   </header>
@@ -116,7 +114,7 @@
         <h3>Aide visuelle</h3>
         <img src="../images/barre_defilement.png" alt="Curseur de défilement" style="max-width: 75%;">
         <img src="../images/fermeture_eclair.png" alt="Fermeture éclair" style="max-width: 25%;">
-        <p class="card__help-text">Le curseur fonctionne comme une fermeture éclair</p>
+        <p class="card-help-text">Le curseur fonctionne comme une fermeture éclair</p>
       </div>
     </div>
 
@@ -127,22 +125,18 @@
         <table class="scroll-table">
           <tbody>
 
-            <!-- Rangée 1 : numéros des chats — la 1ère cellule est le "coin" vide -->
-            <tr>
-              <td></td><!-- coin vide, aligné avec la colonne des numéros de chiens -->
-              <td><span class="card__number">1</span></td>
-              <td><span class="card__number">2</span></td>
-              <td><span class="card__number">3</span></td>
-              <td><span class="card__number">4</span></td>
-              <td><span class="card__number">5</span></td>
-              <td><span class="card__number">6</span></td>
-              <td><span class="card__number">7</span></td>
+                        <tr>
+              <td></td>              <td><span class="sticker">1</span></td>
+              <td><span class="sticker">2</span></td>
+              <td><span class="sticker">3</span></td>
+              <td><span class="sticker">4</span></td>
+              <td><span class="sticker">5</span></td>
+              <td><span class="sticker">6</span></td>
+              <td><span class="sticker">7</span></td>
             </tr>
 
-            <!-- Rangée 2 : photos des chats -->
-            <tr>
-              <td></td><!-- coin vide -->
-              <td><img src="../images/chat-01.png" alt="Chat 1"></td>
+                        <tr>
+              <td></td>              <td><img src="../images/chat-01.png" alt="Chat 1"></td>
               <td><img src="../images/chat-02.png" alt="Chat 2"></td>
               <td><img src="../images/chat-03.png" alt="Chat 3"></td>
               <td><img src="../images/chat-04.png" alt="Chat 4"></td>
@@ -151,10 +145,8 @@
               <td><img src="../images/chat-07.png" alt="Chat 7"></td>
             </tr>
 
-            <!-- Rangée 3 : chien 1 + hint-box -->
-            <tr>
-              <td><span class="card__number">1</span></td><!-- numéro chien dans la colonne "coin" -->
-              <td><img src="../images/chien-01.png" alt="Chien 1"></td>
+                        <tr>
+              <td><span class="sticker">1</span></td>              <td><img src="../images/chien-01.png" alt="Chien 1"></td>
               <td></td>
               <td></td>
               <td></td>
@@ -171,9 +163,8 @@
               </td>
             </tr>
 
-            <!-- Rangée 4 : chien 2 -->
-            <tr>
-              <td><span class="card__number">2</span></td>
+                        <tr>
+              <td><span class="sticker">2</span></td>
               <td><img src="../images/chien-02.png" alt="Chien 2"></td>
               <td></td>
               <td></td>
@@ -183,9 +174,8 @@
               <td></td>
             </tr>
 
-            <!-- Rangée 5 : chien 3 -->
-            <tr>
-              <td><span class="card__number">3</span></td>
+                        <tr>
+              <td><span class="sticker">3</span></td>
               <td><img src="../images/chien-03.png" alt="Chien 3"></td>
               <td></td>
               <td></td>
@@ -195,9 +185,8 @@
               <td></td>
             </tr>
 
-            <!-- Rangée 6 : chien 4 -->
-            <tr>
-              <td><span class="card__number">4</span></td>
+                        <tr>
+              <td><span class="sticker">4</span></td>
               <td><img src="../images/chien-04.png" alt="Chien 4"></td>
               <td></td>
               <td></td>
@@ -207,9 +196,8 @@
               <td></td>
             </tr>
 
-            <!-- Rangée 7 : chien 5 -->
-            <tr>
-              <td><span class="card__number">5</span></td>
+                        <tr>
+              <td><span class="sticker">5</span></td>
               <td><img src="../images/chien-05.png" alt="Chien 5"></td>
               <td></td>
               <td></td>
@@ -219,9 +207,8 @@
               <td></td>
             </tr>
 
-            <!-- Rangée 8 : chien 6 -->
-            <tr>
-              <td><span class="card__number">6</span></td>
+                        <tr>
+              <td><span class="sticker">6</span></td>
               <td><img src="../images/chien-06.png" alt="Chien 6"></td>
               <td></td>
               <td></td>
