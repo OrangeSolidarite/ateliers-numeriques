@@ -7,80 +7,11 @@
   <title>Se déplacer - Exercice 5</title>
   <link rel="stylesheet" href="../style/main.css">
   <link rel="shortcut icon" type="image/x-icon" href="../images/orange-logo.svg">
-  <style>
-    .dropdown {
-      display: flex;
-      flex-direction: column;
-      align-items: flex-start;
-      gap: var(--spacing-s);
-      max-width: 420px;
-    }
 
-    .dropdown label {
-      font-size: 14px;
-      font-weight: 700;
-      color: var(--text-primary);
-    }
-
-    .dropdown select {
-      width: 100%;
-      min-height: 48px;
-      padding: 12px 44px 12px 16px;
-      border: 2px solid var(--core-black);
-      border-radius: 0;
-      background-color: var(--core-white);
-      color: var(--text-primary);
-      font-size: 16px;
-      font-family: inherit;
-      line-height: 1.4;
-      appearance: none;
-      -webkit-appearance: none;
-      -moz-appearance: none;
-      cursor: pointer;
-      transition: var(--transition);
-    }
-
-    .dropdown select:hover {}
-
-    .dropdown select:focus {}
-
-    .dropdown select::after {
-      content: "";
-      position: absolute;
-      top: 50%;
-      right: 16px;
-      width: 10px;
-      height: 10px;
-      border-right: 2px solid var(--core-black);
-      border-bottom: 2px solid var(--core-black);
-      transform: translateY(-65%) rotate(45deg);
-      pointer-events: none;
-    }
-
-    .feedback {
-      display: none;
-      width: 100%;
-      padding: var(--spacing-s) var(--spacing-m);
-      font-size: 14px;
-      font-weight: 700;
-      line-height: 1.4;
-    }
-
-    .feedback.success {
-      background-color: #e8f5e9;
-      border: 1px solid #2e7d32;
-      color: #1b5e20;
-    }
-
-    .feedback.error {
-      background-color: #fdecea;
-      border: 1px solid #d32f2f;
-      color: #b71c1c;
-    }
-  </style>
 </head>
 
 <body>
+  <script src="../scripts/main.js"></script>
   <header>
     <div class="header-inner">
       <div class="header-left">
@@ -108,7 +39,7 @@
       <h3>💡 Conseil important</h3>
       <p>
         Cliquez sur la <strong>petite flèche</strong> du menu pour ouvrir la liste.
-        Faites défiler jusqu'à voir le chiffre <strong style="color: #856404">3</strong>,
+        Faites défiler jusqu'à voir le chiffre <strong>3</strong>,
         puis cliquez précisément dessus.
       </p>
     </div>
@@ -118,15 +49,15 @@
         <h3>Comment utiliser un menu déroulant</h3>
         <div class="steps">
           <div class="step">
-            <strong>Étape 1 — Ouvrir le menu :</strong><br>
+            <strong>Étape 1 - Ouvrir le menu :</strong><br>
             Cliquez sur la flèche à droite du champ pour afficher la liste des choix.
           </div>
           <div class="step">
-            <strong>Étape 2 — Faire défiler :</strong><br>
+            <strong>Étape 2 - Faire défiler :</strong><br>
             Descendez dans la liste jusqu'à ce que le chiffre <strong>3</strong> apparaisse.
           </div>
           <div class="step">
-            <strong>Étape 3 — Sélectionner :</strong><br>
+            <strong>Étape 3 - Sélectionner :</strong><br>
             Cliquez bien sur le chiffre <strong>3</strong>.
           </div>
           <div class="step">
@@ -137,61 +68,36 @@
       </div>
 
       <div class="card">
-        <h2>Sélectionnez le chiffre 3 dans le menu déroulant</h2>
+        <h3>Sélectionnez le chiffre 3 dans le menu déroulant</h3>
 
         <div class="dropdown">
-          <label for="menu-deroulant" class="dropdown-label">Choix</label>
-
-          <div class="ods-select">
-            <select id="menu-deroulant" onchange="verifierChoix(this)">
-              <option value="">Ceci est un menu déroulant.</option>
-              <option value="erreur">18</option>
-              <option value="erreur">19</option>
-              <option value="erreur">20</option>
-              <option value="erreur">21</option>
-              <option value="succes">3</option>
-            </select>
-          </div>
-
-          <p class="card-help-text">
-            Ouvrez la liste et choisissez le chiffre <strong>3</strong>.
-          </p>
-
-          <div id="feedback-success" class="feedback success">
-            Bravo, le chiffre 3 a bien été sélectionné.
-          </div>
-
-          <div id="feedback-error" class="feedback error">
-            Ce n'est pas le bon chiffre. Essayez encore.
-          </div>
+          <label class="dropdown-label">Choix</label>
+          <button class="btn btn-dropdown" type="button" onclick="toggleDropdown(this)" aria-expanded="false">
+            Ceci est un menu déroulant
+          </button>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" onclick="selectOption(this, 'error')">18</a></li>
+            <li><a class="dropdown-item" onclick="selectOption(this, 'error')">19</a></li>
+            <li><a class="dropdown-item" onclick="selectOption(this, 'error')">20</a></li>
+            <li><a class="dropdown-item" onclick="selectOption(this, 'error')">21</a></li>
+            <li><a class="dropdown-item" onclick="selectOption(this, 'success')">3</a></li>
+          </ul>
         </div>
 
-        <a href="deplacement-06.html" class="btn btn-primary" id="btn-suite" style="display: none;">Suite</a>
+        <div id="feedback-success" class="feedback feedback-success" style="display: none;">
+          <span class="feedback-icon">✅</span>
+          <span>Bravo ! Vous avez sélectionné le bon chiffre.</span>
+        </div>
+        <div id="feedback-error" class="feedback feedback-error" style="display: none;">
+          <span class="feedback-icon">❌</span>
+          <span>Ce n'est pas le bon chiffre. Essayez encore.</span>
+        </div>
+
+        <a href="deplacement-06.html" class="btn btn-primary" id="btn-suite"
+          style="display: none; margin-top: auto;">Suite</a>
       </div>
     </div>
-
-
   </main>
-
-  <script>
-    function verifierChoix(select) {
-      const valeur = select.value;
-      const feedbackSuccess = document.getElementById('feedback-success');
-      const feedbackError = document.getElementById('feedback-error');
-      const btnSuite = document.getElementById('btn-suite');
-
-      feedbackSuccess.style.display = 'none';
-      feedbackError.style.display = 'none';
-      btnSuite.style.display = 'none';
-
-      if (valeur === 'succes') {
-        feedbackSuccess.style.display = 'block';
-        btnSuite.style.display = 'inline-flex';
-      } else if (valeur === 'erreur') {
-        feedbackError.style.display = 'block';
-      }
-    }
-  </script>
 </body>
 
 </html>

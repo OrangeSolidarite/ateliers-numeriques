@@ -1,90 +1,114 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
-<html>
+<!DOCTYPE html>
+<html lang="fr">
+
 <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Se déplacer - Exercice 6</title>
+  <link rel="stylesheet" href="../style/main.css">
+  <link rel="shortcut icon" type="image/x-icon" href="../images/orange-logo.svg">
+</head>
 
+<body>
+  <script src="../scripts/main.js"></script>
+  <header>
+    <div class="header-inner">
+      <div class="header-left">
+        <a href="../../index.html">
+          <img src="../images/orange-logo.svg" alt="Logo Orange">
+        </a>
+        <h1>Tutoriels - Manipulation de la souris et du clavier</h1>
+      </div>
+      <div class="header-right">
+        <span class="tag">Déplacement 8</span>
+      </div>
+    </div>
+  </header>
 
-<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<meta name="GENERATOR" content="Microsoft FrontPage Express 2.0"><title>Manipuler la souris</title>
+  <main>
+    <section class="hero">
+      <h1>S'entraîner avec un menu déroulant - Encore une fois !</h1>
+      <p>
+        <strong>Objectif :</strong> Faire défiler la liste et sélectionner le numéro
+        <strong>15</strong>.
+      </p>
+    </section>
 
-<style type="text/css">
-.Style1 {font-size: 36px}
-.Style2 {
-	color: #FF0000;
-	font-weight: bold;
-	font-size: 24px;
-}
--->
-</style></head><body bgcolor="#ffffff">
-<script language="JavaScript">
+    <div class="info-section">
+      <h3>💡 Conseil important</h3>
+      <p>
+        La liste ne montre pas tous les choix d'un coup. Cliquez sur la
+        <strong>petite flèche vers le bas</strong> du menu et faites défiler
+        jusqu'à voir le numéro <strong>15</strong>,
+        puis cliquez précisément dessus.
+      </p>
+    </div>
 
-
-
-function formHandler(form){
-var URL = form.site.options[form.site.selectedIndex].value;
-window.location.href = URL;
-// End -->
-}
-</script>
-
-<table border="0" width="100%">
-  <tbody><tr align="center" valign="middle">
-    <td><img src="images/calvier.jpg" height="86" width="130"></td>
-    <td><img src="images/formation7.jpg" height="100" width="96"></td>
-    <td><img src="images/formation18.jpg" height="86" width="130"></td>
-    <td><img src="images/ateliers3.html" height="86" width="130"></td>
-    <td><img src="images/2006-nov-atelier-aines-(9).jpg" height="97" width="130"></td>
-    <td><img src="images/de1.jpg" height="100" width="62"></td>
-  </tr>
-</tbody></table>
-<p class="Style1" align="center"></p>
-<p align="center"><br>
-</p>
-<div align="center"><center>
-
-<table border="0">
-<tbody>    <tr>
-        <td bgcolor="#ffff99" valign="top"><div align="center">
-          <p><font size="4">Bien on continue.... </font></p>
-          <p><font size="4">Maintenant, cherchez dans la liste<br>
-                et, cliquez sur</font><span class="Style2"> 40 </span><br>
-              </p>
+    <div class="grid">
+      <div class="card">
+        <h3>Comment utiliser ce menu déroulant</h3>
+        <div class="steps">
+          <div class="step">
+            <strong>Étape 1 - Ouvrir le menu :</strong><br>
+            Cliquez sur la flèche à droite du champ pour afficher la liste des choix.
+          </div>
+          <div class="step">
+            <strong>Étape 2 - Faire défiler :</strong><br>
+            Descendez dans la liste jusqu'à ce que le numéro <strong>15</strong> soit visible.
+          </div>
+          <div class="step">
+            <strong>Étape 3 - Sélectionner :</strong><br>
+            Cliquez bien sur le numéro <strong>15</strong> et pas sur un autre.
+          </div>
+          <div class="step">
+            <strong>Astuce :</strong><br>
+            Prenez votre temps. Le bon geste vient avec l'entraînement.
+          </div>
         </div>
-          <p></p>
-        <form name="form">
-            <p align="center">
-              <select name="site" size="4" onchange="formHandler(this.form)">
-                <option value="" selected="selected">Choisir dans la liste</option>
-                <option value="erreur.html">1</option>
-                <option value="erreur.html">5</option>
-                <option value="erreur.html">10</option>
-                <option value="erreur.html">15</option>
-                <option value="erreur.html">20</option>
-                <option value="erreur.html">25</option>
-                <option value="erreur.html">30</option>
-                <option value="erreur.html">35</option>
-				
-					
-                <option value="page23-3.html">40</option>
-                <option value="erreur.html">45</option>
-                <option value="erreur.html">50</option>
-                </select>
-            </p>
-        </form>
-        <p><br>
+      </div>
 
-        <br>
-        <br>
-        <br>
-        Attention !!  Une erreur vous renvoie vraiment en arri�re. </p>
-	
-        </td>
-    </tr>
-</tbody></table>
-</center></div>
+      <div class="card">
+        <h3>Sélectionnez le numéro 15 dans le menu déroulant</h3>
 
-<p><br>
-<br>
-</p>
+        <div class="dropdown">
+          <label class="dropdown-label" for="btn-liste">Liste des numéros</label>
+          <button class="btn btn-dropdown" type="button" id="btn-liste"
+            onclick="toggleDropdown(this)" aria-expanded="false">
+            Choisir un numéro
+          </button>
+          <ul class="dropdown-menu" id="dropdown-menu">
+            <li><a class="dropdown-item" onclick="selectOption(this, 'error')">1</a></li>
+            <li><a class="dropdown-item" onclick="selectOption(this, 'error')">2</a></li>
+            <li><a class="dropdown-item" onclick="selectOption(this, 'error')">3</a></li>
+            <li><a class="dropdown-item" onclick="selectOption(this, 'error')">4</a></li>
+            <li><a class="dropdown-item" onclick="selectOption(this, 'error')">5</a></li>
+            <li><a class="dropdown-item" onclick="selectOption(this, 'error')">6</a></li>
+            <li><a class="dropdown-item" onclick="selectOption(this, 'error')">7</a></li>
+            <li><a class="dropdown-item" onclick="selectOption(this, 'error')">8</a></li>
+            <li><a class="dropdown-item" onclick="selectOption(this, 'error')">9</a></li>
+            <li><a class="dropdown-item" onclick="selectOption(this, 'error')">10</a></li>
+            <li><a class="dropdown-item" onclick="selectOption(this, 'error')">11</a></li>
+            <li><a class="dropdown-item" onclick="selectOption(this, 'error')">12</a></li>
+            <li><a class="dropdown-item" onclick="selectOption(this, 'error')">13</a></li>
+            <li><a class="dropdown-item" onclick="selectOption(this, 'error')">14</a></li>
+            <li><a class="dropdown-item" onclick="selectOption(this, 'success')">15</a></li>
+          </ul>
+        </div>
 
-<p align="right">&nbsp;</p>
+        <div id="feedback-success" class="feedback feedback-success" style="display: none;">
+          <span class="feedback-icon">✅</span>
+          <span>Bravo ! Vous avez sélectionné le bon numéro.</span>
+        </div>
+        <div id="feedback-error" class="feedback feedback-error" style="display: none;">
+          <span class="feedback-icon">❌</span>
+          <span>Ce n'est pas le bon numéro. Essayez encore.</span>
+        </div>
+
+        <a href="deplacement-07.html" class="btn btn-primary" id="btn-suite"
+          style="display: none; margin-top: auto;">Suite</a>
+      </div>
+    </div>
+  </main>
+</body>
+
 </html>

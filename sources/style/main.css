@@ -87,7 +87,6 @@ body {
   font-weight: 400;
   font-size: 16px;
   line-height: 24px;
-  letter-spacing: -0.2px;
   color: var(--text-primary);
   background-color: var(--bg-page);
   min-height: 100vh;
@@ -110,23 +109,20 @@ h2,
 h3,
 h4,
 h5,
-h6 {  
+h6 {
   line-height: 24px;
-  letter-spacing: -0.5px;
   font-weight: 700;
 }
 
 h1 {
   font-size: 20px;
   line-height: 34px;
-  letter-spacing: -1px;
 }
 
 h2 {
   font-size: 16px;
   color: var(--brand-orange);
   line-height: 34px;
-  letter-spacing: -1px;
 }
 
 h3 {
@@ -159,12 +155,11 @@ hr {
   font-size: 16px;
   text-decoration: none;
   width: fit-content;
-  letter-spacing: -0.2px;
   border-width: 2px;
   border-style: solid;
-  line-height: 20px; 
+  line-height: 20px;
+  cursor: pointer;
 }
-
 
 .btn-primary {
   border-color: var(--brand-orange);
@@ -184,6 +179,12 @@ hr {
   color: var(--core-black);
 }
 
+.btn-primary:disabled {
+  background-color: var(--grey-ccc);
+  color: var(--core-white);
+  border-style: none;
+}
+
 .tag {
   background-color: var(--core-white);
   padding: var(--spacing-xs) var(--spacing-s);
@@ -197,8 +198,7 @@ hr {
   font-weight: 700;
   font-size: 14px;
   white-space: nowrap;
-  letter-spacing: -0.1px;
-  line-height: 18px; 
+  line-height: 18px;
   text-align: center;
   font-weight: 700;
 }
@@ -214,6 +214,103 @@ hr {
   border-radius: 100%;
   font-weight: 700;
   font-size: 20px;
+}
+
+/* ============================================
+   DROPDOWN
+   ============================================ */
+
+.dropdown {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  position: relative;
+}
+
+.dropdown-label {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--core-black);
+  line-height: 18px;
+  white-space: nowrap;
+}
+
+.btn-dropdown,
+.dropdown-item {
+  display: flex;
+  align-items: center;
+  height: 30px;
+  padding: 0 5px;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.btn-dropdown {
+  justify-content: space-between;
+  border: 2px solid var(--grey-ccc);
+  color: var(--grey-666);
+  background-color: var(--core-white);
+  user-select: none;
+  width: 100%;
+  text-align: left;
+}
+
+.btn-dropdown::after {
+  content: '';
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16'%3E%3Cpath fill='%23000000' d='M2 5l6 6 6-6z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 16px;
+  transition: transform 0.2s ease;
+  flex-shrink: 0;
+}
+
+.btn-dropdown[aria-expanded="true"] {
+  border-color: var(--core-black);
+}
+
+.btn-dropdown[aria-expanded="true"]::after {
+  transform: rotate(180deg);
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  border: 2px solid var(--grey-ccc);
+  border-top: none;
+  background-color: var(--core-white);
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  z-index: 100;
+  max-height: calc(100vh - 400px);
+  overflow-y: auto;
+}
+
+.dropdown-menu.open {
+  display: block;
+}
+
+.dropdown-item {
+  color: var(--core-black);
+  text-decoration: none;
+  border: none;
+}
+
+.dropdown-item:hover {
+  background-color: var(--grey-ccc);
+}
+
+.dropdown-item:focus {
+  background-color: var(--core-black);
+  color: var(--core-white);
 }
 
 /* ============================================
@@ -251,7 +348,6 @@ header {
 .header-inner h1 {
   font-size: 18px;
   font-weight: 700;
-  letter-spacing: 0.4px;
 }
 
 .header-right {
@@ -329,7 +425,7 @@ main {
 }
 
 /* ============================================
-   CARDS
+   CARD
    ============================================ */
 
 .card {
@@ -341,7 +437,6 @@ main {
   display: flex;
   flex-direction: column;
   gap: var(--spacing-s);
-  justify-content: space-between;
   text-decoration: none;
   color: inherit;
 }
@@ -370,10 +465,11 @@ main {
   color: var(--text-muted);
   font-size: 13px;
   text-align: center;
+  margin-top: auto;
 }
 
 /* ============================================
-   STEPS (Instructions)
+   STEPS
    ============================================ */
 .steps {
   display: grid;
@@ -391,7 +487,7 @@ main {
 }
 
 /* ============================================
-   ANSWERS (Astuces/Conseils)
+   ANSWERS
    ============================================ */
 .answers {
   display: grid;
@@ -413,4 +509,35 @@ main {
 
 .answer strong {
   font-size: 13px;
+}
+
+/* ============================================
+   ANSWERS
+   ============================================ */
+
+.feedback {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-s);
+  padding: var(--spacing-s) var(--spacing-m);
+  font-size: 14px;
+  font-weight: 700;
+  border-left: 4px solid;
+}
+
+.feedback-success {
+  background-color: var(--lighter-green);
+  border-color: var(--darker-green);
+  color: var(--darker-green);
+}
+
+.feedback-error {
+  background-color: #fde8e3;
+  border-color: var(--functional-red);
+  color: var(--functional-red);
+}
+
+.feedback-icon {
+  font-size: 18px;
+  flex-shrink: 0;
 }

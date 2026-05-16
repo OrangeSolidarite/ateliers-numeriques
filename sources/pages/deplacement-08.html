@@ -1,79 +1,136 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
-<html>
+<!DOCTYPE html>
+<html lang="fr">
+
 <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Se déplacer - Exercice 8</title>
+  <link rel="stylesheet" href="../style/main.css">
+  <link rel="shortcut icon" type="image/x-icon" href="../images/orange-logo.svg">
+  <style>
+    .dropdown-menu {
+      display: block;
+      position: static;
+      border: 2px solid var(--grey-ccc);
+      overflow-y: auto;
+      max-height: 150px;
+    }
+  </style>
+</head>
 
+<body>
+  <script src="../scripts/main.js"></script>
+  <header>
+    <div class="header-inner">
+      <div class="header-left">
+        <a href="../../index.html">
+          <img src="../images/orange-logo.svg" alt="Logo Orange">
+        </a>
+        <h1>Tutoriels - Manipulation de la souris et du clavier</h1>
+      </div>
+      <div class="header-right">
+        <span class="tag">Déplacement 7</span>
+      </div>
+    </div>
+  </header>
 
-<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
-<script language="JavaScript">
-// Created by Doug Popeney (easyjav@easyjavascipt.com)
-// JavaScript Made Easy!! - http://www.easyjavascript.com
+  <main>
+    <section class="hero">
+      <h1>S'entraîner avec une grande liste à faire défiler</h1>
+      <p>
+        <strong>Objectif :</strong> Faire défiler la liste et cliquer sur la
+        <strong>plus grande valeur</strong>
+      </p>
+    </section>
 
- function surfto(form) {
-        var myindex=form.dest.selectedIndex
-        location=form.dest.options[myindex].value;
-}
-//-->
-</script>
+    <div class="info-section">
+      <h3>💡 Conseil important</h3>
+      <p>
+        La liste contient de nombreux nombres. Faites défiler jusqu'en bas pour trouver
+        <strong>200</strong>, la plus grande valeur,
+        puis cliquez précisément dessus.
+        Attention, un mauvais choix sera compté comme une erreur !
+      </p>
+    </div>
 
-<meta content="Microsoft FrontPage 4.0" name="GENERATOR">
-<style type="text/css">
-.Style1 {font-size: 36px}
-.Style2 {color: #FF0000}
-.Style4 {
-	color: #FF0000;
-	font-weight: bold;
-	font-size: 24px;
-}
--->
-</style></head><body bgcolor="#ffffff">
-<table border="0" width="100%">
-  <tbody><tr align="center" valign="middle">
-    <td><img src="images/calvier.jpg" height="86" width="130"></td>
-    <td><img src="images/enfant14.html" height="74" width="130"></td>
-    <td><img src="images/formation7.jpg" height="100" width="96"></td>
-    <td><img src="images/formation18.jpg" height="86" width="130"></td>
-    <td><img src="images/ateliers3.html" height="86" width="130"></td>
-    <td><img src="images/2006-nov-atelier-aines-(9).jpg" height="97" width="130"></td>
-    <td><img src="images/de1.jpg" height="100" width="62"></td>
-    <td><img src="images/index4.html" height="86" width="130"></td>
-  </tr>
-</tbody></table>
-<p class="Style1" align="center">Maison de l'Emploi et de l'Internet Valence d'Agen</p>
-<br>
-<br>
-<center>
-<table borders="0" width="100%">
-  <tbody>
-  <tr>
-    <td colspan="3"><font size="4">R�vision d' un <b>menu d�roulant 
-      </b></font><br>
-      <br><br></td></tr>
-  <tr>
-    <td valign="top">
-      <form name="myform"></form><br>
-</td>
-    <td bgcolor="#ffff99" valign="top"><font size="4">
-      </font>
-    <ol>
-<font size="4">            </font>
-<li><font size="4">D�placez-vous dans la liste, puis cliquer sur le chiffre </font><span class="Style4">6</span> 
-  <p></p>
-</li>
-<li><font size="4">Puis </font><font size="4">Cliquer sur le carr� indiquant "<span class="Style2">GO</span>" </font></li>
-</ol>
-      <font size="4"></font></td>
-    <td valign="top"><form name="myform">
-      <select size="4" name="dest">
-        <option value="erreur1.html" selected="selected">19</option>
-        <option value="erreur1.html">20</option>
-        <option value="erreur1.html">21</option>
-        <option value="erreur1.html">22</option>
-        <option value="erreur1.html">23</option>
-        <option value="page26.html">6</option>
-      </select>
-      <input onclick="surfto(this.form)" value="Go" type="button">
-    </form>
-      </td>
-  </tr></tbody></table>
-</center></body>
+    <div class="grid">
+      <div class="card">
+        <h3>Comment trouver la plus grande valeur</h3>
+        <div class="steps">
+          <div class="step">
+            <strong>Étape 1 - Observer la liste :</strong><br>
+            La liste affiche de nombreux nombres dans l'ordre croissant.
+          </div>
+          <div class="step">
+            <strong>Étape 2 - Faire défiler :</strong><br>
+            Utilisez la molette de la souris ou la barre de défilement à droite
+            pour descendre jusqu'au bas de la liste.
+          </div>
+          <div class="step">
+            <strong>Étape 3 - Sélectionner :</strong><br>
+            Cliquez bien sur le nombre <strong>200</strong>, la plus grande valeur,
+            et pas sur un autre.
+          </div>
+          <div class="step">
+            <strong>Astuce :</strong><br>
+            La plus grande valeur se trouve tout en bas de la liste. Prenez votre temps !
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <h3>Trouvez et cliquez sur la plus grande valeur</h3>
+
+        <div class="dropdown">
+          <span class="dropdown-label">Liste des nombres</span>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" onclick="selectOption(this, 'error')">8</a></li>
+            <li><a class="dropdown-item" onclick="selectOption(this, 'error')">9</a></li>
+            <li><a class="dropdown-item" onclick="selectOption(this, 'error')">10</a></li>
+            <li><a class="dropdown-item" onclick="selectOption(this, 'error')">11</a></li>
+            <li><a class="dropdown-item" onclick="selectOption(this, 'error')">12</a></li>
+            <li><a class="dropdown-item" onclick="selectOption(this, 'error')">14</a></li>
+            <li><a class="dropdown-item" onclick="selectOption(this, 'error')">16</a></li>
+            <li><a class="dropdown-item" onclick="selectOption(this, 'error')">18</a></li>
+            <li><a class="dropdown-item" onclick="selectOption(this, 'error')">20</a></li>
+            <li><a class="dropdown-item" onclick="selectOption(this, 'error')">22</a></li>
+            <li><a class="dropdown-item" onclick="selectOption(this, 'error')">24</a></li>
+            <li><a class="dropdown-item" onclick="selectOption(this, 'error')">28</a></li>
+            <li><a class="dropdown-item" onclick="selectOption(this, 'error')">36</a></li>
+            <li><a class="dropdown-item" onclick="selectOption(this, 'error')">48</a></li>
+            <li><a class="dropdown-item" onclick="selectOption(this, 'error')">72</a></li>
+            <li><a class="dropdown-item" onclick="selectOption(this, 'error')">96</a></li>
+            <li><a class="dropdown-item" onclick="selectOption(this, 'error')">98</a></li>
+            <li><a class="dropdown-item" onclick="selectOption(this, 'error')">100</a></li>
+            <li><a class="dropdown-item" onclick="selectOption(this, 'error')">105</a></li>
+            <li><a class="dropdown-item" onclick="selectOption(this, 'error')">108</a></li>
+            <li><a class="dropdown-item" onclick="selectOption(this, 'error')">109</a></li>
+            <li><a class="dropdown-item" onclick="selectOption(this, 'error')">112</a></li>
+            <li><a class="dropdown-item" onclick="selectOption(this, 'error')">120</a></li>
+            <li><a class="dropdown-item" onclick="selectOption(this, 'error')">130</a></li>
+            <li><a class="dropdown-item" onclick="selectOption(this, 'error')">140</a></li>
+            <li><a class="dropdown-item" onclick="selectOption(this, 'error')">150</a></li>
+            <li><a class="dropdown-item" onclick="selectOption(this, 'error')">160</a></li>
+            <li><a class="dropdown-item" onclick="selectOption(this, 'error')">170</a></li>
+            <li><a class="dropdown-item" onclick="selectOption(this, 'error')">180</a></li>
+            <li><a class="dropdown-item" onclick="selectOption(this, 'error')">190</a></li>
+            <li><a class="dropdown-item" onclick="selectOption(this, 'success')">200</a></li>
+          </ul>
+        </div>
+
+        <div id="feedback-success" class="feedback feedback-success" style="display: none;">
+          <span class="feedback-icon">✅</span>
+          <span>Bravo ! Vous avez sélectionné la plus grande valeur.</span>
+        </div>
+        <div id="feedback-error" class="feedback feedback-error" style="display: none;">
+          <span class="feedback-icon">❌</span>
+          <span>Ce n'est pas la plus grande valeur. Essayez encore.</span>
+        </div>
+
+        <a href="deplacement-09.html" class="btn btn-primary" id="btn-suite" style="display: none; margin-top: auto;">Suite</a>
+      </div>
+    </div>
+  </main>
+</body>
+
 </html>
