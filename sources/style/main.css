@@ -60,9 +60,6 @@
   --spacing-xl: 25px;
   --spacing-2xl: 30x;
 
-  /* Border Radius */
-  --radius: 20px;
-
   /* Shadows */
   --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.1);
   --shadow-md: 0 8px 20px rgba(0, 0, 0, 0.06);
@@ -86,7 +83,7 @@ body {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: 400;
   font-size: 16px;
-  line-height: 24px;
+  line-height: 22px;
   color: var(--text-primary);
   background-color: var(--bg-page);
   min-height: 100vh;
@@ -110,7 +107,6 @@ h3,
 h4,
 h5,
 h6 {
-  line-height: 24px;
   font-weight: 700;
 }
 
@@ -185,11 +181,15 @@ hr {
   border-style: none;
 }
 
+/* ============================================
+   LABELS
+   ============================================ */
+
 .tag {
   background-color: var(--core-white);
   padding: var(--spacing-xs) var(--spacing-s);
 
-  border-radius: var(--radius);
+  border-radius: 24px;
   border-width: 2px;
   border-style: solid;
   border-color: var(--grey-ccc);
@@ -216,10 +216,30 @@ hr {
   font-size: 20px;
 }
 
+.keys {
+  display: inline-flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-xs);
+  align-items: stretch;
+}
+
+.key {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: fit-content;
+  min-width: 30px;
+  padding: 2px;
+  background-color: var(--grey-eee);
+  border: 1px solid var(--grey-ccc);
+  font-size: 16px;
+}
+
 /* ============================================
    DROPDOWN
    ============================================ */
 
+.textarea,
 .dropdown {
   display: flex;
   flex-direction: column;
@@ -227,6 +247,7 @@ hr {
   position: relative;
 }
 
+label,
 .dropdown-label {
   font-size: 14px;
   font-weight: 700;
@@ -311,6 +332,37 @@ hr {
 .dropdown-item:focus {
   background-color: var(--core-black);
   color: var(--core-white);
+}
+
+/* ============================================
+   TEXTAREA
+   ============================================ */
+
+.textarea {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+textarea {
+  flex: 1; 
+  border: 2px solid var(--grey-ccc);
+  padding: 5px;
+  font-size: 14px;
+  font-weight: 700;
+  font-family: inherit;
+  border-radius: 0;
+  outline: none;
+}
+
+textarea::placeholder {
+  color: var(--grey-666);
+  letter-spacing: 0px;
+}
+
+textarea:focus {
+  border-color: var(--core-black);
 }
 
 /* ============================================
@@ -457,7 +509,7 @@ main {
 .card img {
   max-width: 50%;
   height: auto;
-  border-radius: var(--radius);
+  border-radius: 8px;
   align-self: center;
 }
 

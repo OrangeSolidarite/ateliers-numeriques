@@ -1,86 +1,81 @@
-﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
-<html>
-<head>  <link rel="stylesheet" href="../style/main.css">
-    
-    <link rel="shortcut icon" type="image/x-icon" href="../images/orange-logo.svg">
+﻿<!DOCTYPE html>
+<html lang="fr">
 
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Le clavier - Exercice 6</title>
+  <link rel="stylesheet" href="../style/main.css">
+  <link rel="shortcut icon" type="image/x-icon" href="../images/orange-logo.svg">
+</head>
 
+<body>
+  <header>
+    <div class="header-inner">
+      <div class="header-left">
+        <a href="../../index.html">
+          <img src="../images/orange-logo.svg" alt="Logo Orange">
+        </a>
+        <h1>Tutoriels - Manipulation de la souris et du clavier</h1>
+      </div>
+      <div class="header-right">
+        <span class="tag">Clavier 6</span>
+      </div>
+    </div>
+  </header>
 
-<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
-<script language="JavaScript">
+  <main>
+    <section class="hero">
+      <h1>Exercice de frappe avec accents</h1>
+      <p>
+        <strong>Objectif :</strong> Reproduire le texte ci-dessous en utilisant les accents et caractères spéciaux
+        appris
+      </p>
+    </section>
 
+    <div class="info-section">
+      <h3>💡 Conseil important</h3>
+      <p>
+        Cliquez dans la zone et tapez le texte affiché. Prenez votre temps et relisez-vous !
+      </p>
+    </div>
 
-/*
+    <div class="grid">
 
-   This script came from the 24 hour JavaScripts Site
-located at http://www.javascripts.com.  It is brought to 
-  you by Eric Jarvies, Lewis Sellers, Giuseppe Lombardo, 
-          Kurt Anderson, and David Medinets. 
-*/
-function leapTo (link)
-   {
-   var new_url=link;
+      <div class="card">
+        <h3>Texte à reproduire</h3>
+        <div
+          style="background-color: var(--grey-eee); border-left: 4px solid var(--brand-orange);padding: var(--spacing-m) var(--spacing-l);font-size: 15px;line-height: 28px;color: var(--grey-333);font-style: italic;position: relative;">
+          <span
+            style="position: absolute;top: -10px;left: var(--spacing-m);font-size: 48px;color: var(--brand-orange);line-height: 1;font-style: normal; pointer-events: none;">"</span>
+          <p
+            style="color: var(--grey-333); font-size: 15px; line-height: 28px; font-style: italic; text-align: left; margin-top: var(--spacing-s);">
+            Les élèves, vont sur l'île de 25 m². Ils iront à <strong>«&nbsp;Noël&nbsp;»</strong>, ou à <strong>«&nbsp;Pâques&nbsp;»</strong> avec un
+            limaçon. Mais où vont-ils&nbsp;?<br>
+            Ne sont-ils pas fous&nbsp;!<br>
+            Contact à l'adresse&nbsp;: <span style="color: var(--darker-blue); font-style: normal;">ecole@free.fr</span>
+          </p>
+        </div>
 
-   if (  (new_url != "")  &&  (new_url != null)  )
-      window.location=new_url;
-   else
-      alert("\nYou must make a selection.");
-   }
-// -- End Hiding Here -->
-</script>
+      </div>
 
-<script language="JavaScript">
+      <div class="card">
+        <h3>À vous de jouer !</h3>
+        <p>Cliquez dans la zone ci-dessous et reproduisez le texte :</p>
 
+        <div class="textarea">
+          <label>Zone d'exercice</label>
+          <textarea placeholder="Cliquez ici et commencez à taper..."></textarea>
+        </div>
+      </div>
 
-function drawAlert () {
-alert ("When windows pop up. Read their message and click OK.");
-}
-// End -->
-</script>
+    </div>
 
-<script language="JavaScript">
-// Created by Doug Popeney (easyjav@easyjavascipt.com)
-// JavaScript Made Easy!! - http://www.easyjavascript.com
+    <div style="display: flex; justify-content: flex-end;">
+      <a href="../../index.html" class="btn btn-primary">Terminer</a>
+    </div>
 
- function surfto(form) {
-        var myindex=form.dest.selectedIndex
-        location=form.dest.options[myindex].value;
-}
-//-->
-</script>
-
-<meta content="MSHTML 5.50.4522.1800" name="GENERATOR">
-<style type="text/css">
-.Style1 {font-size: 36px}
-.Style9 {color: #3333CC}
--->
-</style>
-<style type="text/css">
-.Style10 {font-size: 18px}
--->
-</style></head><body bgcolor="#ffffff">
-<br>
-<table border="3" width="100%">
-  <tbody><tr>
-    <td bgcolor="#ffff99"><font size="4">Cliquez dans la zone bleue et taper le texte suivant : </font></td>
-    <td rowspan="3" align="center" valign="middle"><p class="Style9" align="center">Cliquer sur<br>
-  le bouton suite<br>
-  pour continuer</p>
-    <p class="Style9" align="center"><a href="../../index.html"><img src="../images/suite.png" border="0" height="66" width="122"></a></p></td>
-  </tr>
-  <tr>
-    <td><p class="Style10">
-Les �l�ves, vont sur l��le de 25 m�. Ils iront � �&nbsp;No�l&nbsp;�, ou
-� �&nbsp;P�ques&nbsp;� avec un lima�on. Mais o� vont-ils&nbsp;?<br> 
-      Ne sont-ils pas fous&nbsp;!<br>
-  Contact � l�adresse&nbsp;: ecole@free.fr</p>
-    </td>
-  </tr>
-  <tr>
-    <td><textarea name="name1" cols="120" rows="6" class="fond"></textarea></td>
-  </tr>
-</tbody></table>
+  </main>
 </body>
+
 </html>
-
-

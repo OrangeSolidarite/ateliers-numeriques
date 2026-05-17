@@ -4,14 +4,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Le Clavier - Exercice 1</title>
+    <title>Le clavier - Exercice 1</title>
     <link rel="stylesheet" href="../style/main.css">
-    
     <link rel="shortcut icon" type="image/x-icon" href="../images/orange-logo.svg">
 </head>
 
 <body>
-        <header>
+    <header>
         <div class="header-inner">
             <div class="header-left">
                 <a href="../../index.html">
@@ -20,114 +19,79 @@
                 <h1>Tutoriels - Manipulation de la souris et du clavier</h1>
             </div>
             <div class="header-right">
-                <span class="tag">Le Clavier</span>
+                <span class="tag">Clavier 1</span>
             </div>
         </div>
     </header>
 
-        <main>
-                <section class="hero">
+    <main>
+        <section class="hero">
             <h1>Découvrir les zones du clavier</h1>
             <p>
-                <strong>Objectif :</strong> Comprendre l'organisation du clavier en 4 zones principales
+                <strong>Objectif :</strong> Repérer les <strong>4 grandes zones</strong> du clavier et leurs fonctions
             </p>
         </section>
 
-                <div class="card">
-            <div style="text-align: center; margin-bottom: 24px;">
-                <img src="../images/clavier4zones.png" alt="Clavier avec 4 zones colorées"
-                    style="max-width: 100%; height: auto; border-radius: 10px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
+        <div class="info-section">
+            <h3>💡 Conseil important</h3>
+            <p>
+                Observez votre clavier et retrouvez chacune des zones décrites ci-dessous.
+                Sur certains claviers compacts ou d'ordinateurs portables, le pavé numérique peut être absent : les
+                signes de calcul se trouvent alors
+                sur la rangée du haut ou accessibles via la touche <strong>Fn</strong>.
+            </p>
+        </div>
+
+        <div class="grid">
+            <div class="card">
+                <h3>Les 4 zones du clavier</h3>
+
+                <div class="steps">
+                    <div class="step" style="border-color: var(--brand-orange);">
+                        <strong style="color: var(--brand-orange);">Zone orange - Les caractères</strong><br>
+                        La zone principale avec les lettres, chiffres et symboles courants.
+                        C'est ici que vous tapez votre texte au quotidien.
+                    </div>
+
+                    <div class="step" style="border-color: var(--blue);">
+                        <strong style="color: var(--blue);">Zone bleue - Les touches de fonction</strong><br>
+                        En haut du clavier, les touches <strong>F1 à F12</strong>. Sur les claviers modernes,
+                        elles servent aussi à régler le volume, la luminosité ou le Wi-Fi.
+                    </div>
+
+                    <div class="step" style="border-color: var(--green);">
+                        <strong style="color: var(--green);">Zone verte - Le pavé numérique</strong><br>
+                        À droite sur les grands claviers, il regroupe les chiffres et les signes de calcul :
+                        <span class="key">+</span>
+                        <span class="key">-</span>
+                        <span class="key">*</span>
+                        <span class="key">/</span>
+                    </div>
+
+                    <div class="step" style="border-color: var(--purple);">
+                        <strong style="color: var(--purple);">Zone violette - Les flèches de direction</strong><br>
+                        Les 4 flèches permettent de déplacer le curseur dans un texte
+                        ou de faire défiler une page, sans toucher la souris.
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <h3>Aide visuelle</h3>
+
+                <img src="../images/grand-clavier.png" alt="Les 4 zones du clavier de bureau"
+                    style="max-width: 100%;" />
+                <p class="card-help-text">Clavier de bureau : les 4 zones sont bien visibles</p>
+
+                <img src="../images/clavier-portable.png" alt="Les zones du clavier portable"
+                    style="max-width: 60%; align-self: center;" />
+                <p class="card-help-text">Clavier de portable : le pavé numérique est absent</p>
             </div>
         </div>
 
-                <div class="grid">
-                        <div class="card" style="border-left: 4px solid #3333CC;">
-                <h3 style="color: #3333CC;">🔵 Zone des numériques</h3>
-                <p style="margin-bottom: 16px;">
-                    Cette zone se trouve <strong>à droite du clavier</strong>. Elle contient :
-                </p>
-                <ul style="margin-left: 20px; line-height: 1.8;">
-                    <li>Les chiffres de <strong>0 à 9</strong></li>
-                    <li>Les signes pour les calculs :</li>
-                </ul>
-                <div
-                    style="background: #f0f0f0; padding: 16px; border-radius: 8px; margin-top: 12px; text-align: center;">
-                    <span style="font-size: 24px; color: #ff0000; font-weight: bold; margin: 0 8px;">+</span>
-                    <span style="font-size: 24px; color: #ff0000; font-weight: bold; margin: 0 8px;">-</span>
-                    <span style="font-size: 24px; color: #ff0000; font-weight: bold; margin: 0 8px;">*</span>
-                    <span style="font-size: 24px; color: #ff0000; font-weight: bold; margin: 0 8px;">/</span>
-                </div>
-                <p style="margin-top: 12px; font-size: 14px; color: #666;">
-                    Addition (+) • Soustraction (-) • Multiplication (*) • Division (/)
-                </p>
-            </div>
-
-                        <div class="card" style="border-left: 4px solid #006633;">
-                <h3 style="color: #006633;">🟢 Zone des flèches de direction</h3>
-                <p style="margin-bottom: 16px;">
-                    Cette zone se trouve <strong>entre le clavier principal et le pavé numérique</strong>.
-                </p>
-                <div style="background: #f0f0f0; padding: 20px; border-radius: 8px; text-align: center;">
-                    <div style="display: flex; flex-direction: column; align-items: center; gap: 8px;">
-                        <div style="display: flex; gap: 8px;">
-                            <span style="font-size: 32px;">↑</span>
-                        </div>
-                        <div style="display: flex; gap: 8px;">
-                            <span style="font-size: 32px;">←</span>
-                            <span style="font-size: 32px;">↓</span>
-                            <span style="font-size: 32px;">→</span>
-                        </div>
-                    </div>
-                    <p style="margin-top: 16px;">
-                        Ces flèches permettent de <strong>déplacer le curseur</strong> dans un texte sans utiliser la
-                        souris.
-                    </p>
-                </div>
-            </div>
-
-                        <div class="grid">
-                                <div class="card" style="border-left: 4px solid #FF9900;">
-                    <h3 style="color: #FF9900;">🟡 Zone des touches de fonction</h3>
-                    <p style="margin-bottom: 16px;">
-                        Cette zone se trouve <strong>en haut du clavier</strong>. Elle contient les touches :
-                    </p>
-                    <div style="background: #f0f0f0; padding: 16px; border-radius: 8px; text-align: center;">
-                        <span style="font-weight: bold; margin: 0 4px;">F1</span>
-                        <span style="font-weight: bold; margin: 0 4px;">F2</span>
-                        <span style="font-weight: bold; margin: 0 4px;">F3</span>
-                        <span style="font-weight: bold; margin: 0 4px;">...</span>
-                        <span style="font-weight: bold; margin: 0 4px;">F12</span>
-                    </div>
-                    <p style="margin-top: 12px; font-size: 14px; color: #666;">
-                        Ces touches ont des fonctions spéciales selon les logiciels utilisés.
-                    </p>
-                </div>
-
-                                <div class="card" style="border-left: 4px solid #FF0000;">
-                    <h3 style="color: #FF0000;">🔴 Zone des caractères</h3>
-                    <p style="margin-bottom: 16px;">
-                        C'est la <strong>zone principale</strong> du clavier. Elle contient :
-                    </p>
-                    <ul style="margin-left: 20px; line-height: 1.8;">
-                        <li>Les <strong>lettres</strong> de A à Z</li>
-                        <li>Les <strong>chiffres</strong> de 0 à 9 (en haut)</li>
-                        <li>Les <strong>signes de ponctuation</strong> : . , ; : ! ?</li>
-                        <li>Les <strong>caractères spéciaux</strong> : @ # € & etc.</li>
-                    </ul>
-                    <p style="margin-top: 12px; background: #fff4e6; padding: 12px; border-radius: 8px;">
-                        <strong>💡 Astuce :</strong> C'est la zone que vous utiliserez le plus pour écrire du texte.
-                    </p>
-                </div>
-            </div>
-
-                        <div style="text-align: center; margin-top: 32px;">
-                <p style="margin-bottom: 16px; font-size: 18px;">
-                    Cliquez sur le bouton <strong style="color: #ff0000;">Suite</strong> pour continuer
-                </p>
-                <a href="clavier-02.html" class="btn btn-primary">
-                    Continuer →
-                </a>
-            </div>
+        <div style="display: flex; justify-content: flex-end;">
+            <a href="clavier-02.html" class="btn btn-primary">Suite</a>
+        </div>
     </main>
 </body>
 
