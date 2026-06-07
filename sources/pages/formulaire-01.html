@@ -2,148 +2,134 @@
 <html lang="fr">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Formulaire - Exercice 1</title>
-    <link rel="stylesheet" href="../style/main.css">
-    <link rel="shortcut icon" type="image/x-icon" href="../images/orange-logo.svg">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Le formulaire - Exercice 1</title>
+  <link rel="stylesheet" href="../style/main.css">
+  <link rel="shortcut icon" type="image/x-icon" href="../images/orange-logo.svg">
 </head>
 
 <body>
-    <header>
-        <div class="header-inner">
-            <div class="header-left">
-                <a href="../../index.html">
-                    <img src="../images/orange-logo.svg" alt="Logo Orange">
-                </a>
-                <h1>Tutoriels - Manipulation de la souris et du clavier</h1>
-            </div>
-            <div class="header-right">
-                <span class="tag">Formulaire 1</span>
-            </div>
+  <header>
+    <div class="header-inner">
+      <div class="header-left">
+        <a href="../../index.html">
+          <img src="../images/orange-logo.svg" alt="Logo Orange">
+        </a>
+        <h1>Tutoriels - Manipulation de la souris et du clavier</h1>
+      </div>
+      <div class="header-right">
+        <span class="tag">Formulaire 1</span>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <h1>Remplir un formulaire</h1>
+      <p>
+        <strong>Objectif :</strong> Saisir votre prénom, votre nom et votre adresse dans les champs ci-dessous
+      </p>
+    </section>
+
+    <div class="info-section">
+      <h3>💡 Conseil important</h3>
+      <p>
+        Regardez toujours le <strong>trait clignotant (curseur)</strong> pour savoir si vous êtes
+        placé au bon endroit avant de taper.
+      </p>
+    </div>
+
+    <div class="grid">
+
+      <div class="card">
+        <h3>Instructions pas à pas</h3>
+        <div class="steps">
+          <div class="step">
+            <strong>Étape 1 - Cliquer dans le champ Prénom :</strong><br>
+            Le trait vertical clignotant apparaît dans la zone : vous êtes prêt à taper.
+          </div>
+          <div class="step">
+            <strong>Étape 2 - Taper votre prénom :</strong><br>
+            Pour une majuscule : maintenez <span class="key">Maj.</span> enfoncée et tapez la lettre
+              souhaitée.
+          </div>
+          <div class="step">
+            <strong>Étape 3 - Passer au champ suivant :</strong><br>
+            Appuyez sur <span class="key">Tab</span> pour aller dans le champ <strong>Nom</strong>, ou cliquez directement dedans.
+          </div>
+          <div class="step">
+            <strong>Étape 4 - Taper votre nom :</strong><br>
+            Vérifiez que le curseur clignote bien dans le champ Nom.
+          </div>
+          <div class="step">
+            <strong>Étape 5 - Saisir votre adresse :</strong><br>
+            Appuyez sur <span class="key">Tab</span> puis tapez votre adresse. Utilisez <span class="key">Entrée</span>
+            pour passer à la ligne suivante.
+          </div>
+          <div class="step">
+            <strong>Étape 6 - Effacer :</strong><br>
+            Le bouton <strong>Effacer</strong> remet tous les champs à zéro.
+          </div>
         </div>
-    </header>
+      </div>
 
-    <main>
-        <section class="hero">
-            <h1>Remplir un formulaire</h1>
-            <p>
-                <strong>Objectif :</strong> Saisir vos informations dans un formulaire en utilisant
-                le clavier et la touche <strong>Tabulation</strong>
-            </p>
-        </section>
+      <div class="card">
+        <h3>À vous de jouer !</h3>
+        <p>Remplissez les champs ci-dessous :</p>
 
-        <div class="info-section">
-            <h3>💡 Conseil important</h3>
-            <p>
-                Regardez toujours le <strong>trait clignotant</strong> (le curseur) pour savoir
-                dans quelle zone vous êtes en train de taper. S'il n'est pas visible,
-                cliquez d'abord dans la zone souhaitée.
-            </p>
-        </div>
+        <form name="formulaire" onsubmit="return false;" style="height: 100%;">
 
-        <div class="grid">
-            <div class="card">
-                <h3>Instructions pas à pas</h3>
+          <div class="textarea">
+            <label for="prenom">Prénom</label>
+            <textarea id="prenom" name="prenom" rows="1" style="resize: none" placeholder="Votre prénom…"></textarea>
+          </div>
 
-                <div class="steps">
-                    <div class="step">
-                        <strong>Cliquer dans la zone Prénom :</strong><br>
-                        Le trait clignotant apparaît dans la zone : vous pouvez taper.
-                    </div>
+          <div class="textarea">
+            <label for="nom">Nom</label>
+            <textarea id="nom" name="nom" rows="1" style="resize: none" placeholder="Votre nom…"></textarea>
+          </div>
 
-                    <div class="step">
-                        <strong>Taper votre prénom :</strong><br>
-                        Pour une majuscule, maintenez
-                        <span class="key">Maj.</span> enfoncée et tapez la lettre.
-                    </div>
+          <div class="textarea">
+            <label for="adresse">Adresse</label>
+            <textarea id="adresse" name="adresse" rows="5" placeholder="Votre adresse…"></textarea>
+          </div>
 
-                    <div class="step">
-                        <strong>Passer au champ suivant :</strong><br>
-                        Appuyez sur <span class="key">Tab</span> pour aller dans la zone Nom.
-                        Vous pouvez aussi cliquer directement dans la zone.
-                    </div>
+          <div style="flex: 1;"></div>
 
-                    <div class="step">
-                        <strong>Taper votre nom :</strong><br>
-                        Appuyez à nouveau sur <span class="key">Tab</span> pour passer à l'adresse.
-                    </div>
-
-                    <div class="step">
-                        <strong>Taper votre adresse :</strong><br>
-                        Pour aller à la ligne, appuyez sur <span class="key">Entrée</span>.
-                    </div>
-
-                    <div class="step">
-                        <strong>Effacer et recommencer :</strong><br>
-                        Le bouton <strong>Effacer</strong> vide toutes les zones pour repartir de zéro.
-                    </div>
-                </div>
-            </div>
-
-            <div class="card">
-                <h3>À vous de jouer !</h3>
-
-                <form onsubmit="return false;">
-
-                    <div class="textarea">
-                        <label for="prenom">Prénom</label>
-                        <textarea id="prenom" name="prenom" rows="1" placeholder="Tapez votre prénom"
-                            style="resize: none; flex: unset;"></textarea>
-                    </div>
-
-                    <div class="textarea">
-                        <label for="nom">Nom</label>
-                        <textarea id="nom" name="nom" rows="1" placeholder="Tapez votre nom"
-                            style="resize: none; flex: unset;"></textarea>
-                    </div>
-
-                    <div class="textarea" style="flex: 1;">
-                        <label for="adresse">Adresse</label>
-                        <textarea id="adresse" name="adresse" rows="4" placeholder="Tapez votre adresse"></textarea>
-                    </div>
-
-                    <button type="reset" class="btn btn-outlined">Effacer</button>
-                </form>
-            </div>
-            <div class="card">
-                <h3>Les touches importantes</h3>
-                <div class="answers">
-                    <div class="answer">
-                        <strong><span class="key">↹</span> Tabulation :</strong>
-                        Passe automatiquement au champ suivant du formulaire
-                    </div>
-                    <div class="answer">
-                        <strong><span class="key">⇧</span> Majuscule :</strong>
-                        Maintenir enfoncée pour taper une lettre en majuscule
-                    </div>
-                    <div class="answer">
-                        <strong><span class="key">↵</span> Entrée :</strong>
-                        Passe à la ligne dans une zone de texte (comme l'adresse)
-                    </div>
-                    <div class="answer">
-                        <strong><span class="key">←</span> Retour arrière :</strong>
-                        Efface le dernier caractère tapé
-                    </div>
-                </div>
-            </div>
-            <div class="card">
-                <h3>Aide visuelle</h3>
-
-                <img src="../images/maj-tab-entree.png" alt="Les 4 zones du clavier de bureau"
-                    style="max-width: 60%;" />
-                <p class="card-help-text">Positions des touches Tab, Maj. et Entrée</p>
-
-                <img src="../images/curseur.gif" alt="Les zones du clavier portable"
-                    style="max-width: 100%;" />
-                
-            </div>
-        </div>
-
-        <div style="display: flex; justify-content: flex-end;">
+          <div style="display: flex; gap: var(--spacing-s); justify-content: flex-end;">
+            <button type="reset" class="btn btn-outlined">Effacer</button>
             <a href="formulaire-02.html" class="btn btn-important">Suite</a>
+          </div>
+
+        </form>
+
+      </div>
+    </div>
+
+    <div class="card">
+      <h3>Rappel des touches utiles</h3>
+      <div class="answers">
+        <div class="answer">
+          <strong>Maj. <span class="key">⇧</span> :</strong>
+          Maintenir enfoncée pour taper une lettre en majuscule
         </div>
-    </main>
+        <div class="answer">
+          <strong>Tab <span class="key">↹</span> :</strong>
+          Passer d'un champ au suivant sans utiliser la souris
+        </div>
+        <div class="answer">
+          <strong>Entrée <span class="key">↵</span> :</strong>
+          Aller à la ligne dans une zone de texte multiligne
+        </div>
+      </div>
+    </div>
+
+    <div style="display: flex; justify-content: flex-end;">
+
+    </div>
+
+  </main>
 </body>
 
 </html>

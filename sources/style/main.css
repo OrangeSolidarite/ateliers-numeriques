@@ -58,7 +58,7 @@
   --spacing-m: 15px;
   --spacing-l: 20px;
   --spacing-xl: 25px;
-  --spacing-2xl: 30x;
+  --spacing-2xl: 30px;
 
   /* Shadows */
   --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.1);
@@ -338,7 +338,7 @@ label,
   margin: 0;
   padding: 0;
   z-index: 100;
-  max-height: calc(100vh - 400px);
+  max-height: calc(100vh - 300px);
   overflow-y: auto;
 }
 

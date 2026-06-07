@@ -1,84 +1,250 @@
-﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
-<html>
+<!DOCTYPE html>
+<html lang="fr">
+
 <head>
-
-
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-<meta name="GENERATOR" content="Microsoft FrontPage Express 2.0"><title>Manipuler la souris</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Le formulaire - Exercice 3</title>
   <link rel="stylesheet" href="../style/main.css">
-    
-    <link rel="shortcut icon" type="image/x-icon" href="../images/orange-logo.svg">
+  <link rel="shortcut icon" type="image/x-icon" href="../images/orange-logo.svg">
+  <style>
+    .radio-group {
+      display: flex;
+      gap: var(--spacing-xl);
+    }
 
-<style type="text/css">
-.Style1 {font-size: 36px}
-.Style2 {
-	color: #FF0000;
-	font-weight: bold;
-	font-size: 24px;
-}
--->
-</style></head><body bgcolor="#ffffff">
-<script language="JavaScript">
+    .radio {
+      gap: var(--spacing-xs);
+      display: flex;
+      align-items: center
+    }
 
+    input[type="radio"] {
+      margin: 0;
+      appearance: none;
+      -webkit-appearance: none;
+      width: 16px;
+      height: 16px;
+      border: 2px solid var(--grey-ccc);
+      border-radius: 50%;
+      cursor: pointer;
+      flex-shrink: 0;
+      position: relative;
+    }
 
+    input[type="radio"]:checked {
+      background-color: var(--brand-orange);
+      border: none;
+    }
 
-function formHandler(form){
-var URL = form.site.options[form.site.selectedIndex].value;
-window.location.href = URL;
-// End -->
-}
-</script>
+    input[type="radio"]:checked::after {
+      content: '';
+      position: absolute;
+      width: 6px;
+      height: 6px;
+      background-color: var(--core-black);
+      border-radius: 50%;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
 
-<p align="center"><br>
-</p>
-<div align="center"><center>
+    .form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: var(--spacing-s);
+    }
 
-<table border="0">
-<tbody>    <tr>
-        <td bgcolor="#ffff99" valign="top"><div align="center">
-          <p><font size="4">Bien on continue.... </font></p>
-          <p><font size="4">Maintenant, cherchez dans la liste<br>
-                et, cliquez sur</font><span class="Style2"> 40 </span><br>
-              </p>
+    .field {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+  </style>
+</head>
+
+<body>
+  <script src="../scripts/main.js"></script>
+  <header>
+    <div class="header-inner">
+      <div class="header-left">
+        <a href="../../index.html">
+          <img src="../images/orange-logo.svg" alt="Logo Orange">
+        </a>
+        <h1>Tutoriels - Manipulation de la souris et du clavier</h1>
+      </div>
+      <div class="header-right">
+        <span class="tag">Formulaire 3</span>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <h1>Remplir un formulaire complet</h1>
+      <p>
+        <strong>Objectif :</strong> Remplir tous les champs du formulaire comme on le ferait
+        sur un vrai site internet
+      </p>
+    </section>
+
+    <div class="info-section">
+      <h3>💡 Conseil important</h3>
+      <p>
+        Lisez bien chaque champ avant de taper. Certains champs demandent un format précis,
+        comme la date de naissance. Prenez votre temps et vérifiez ce que vous avez écrit.
+      </p>
+    </div>
+
+    <div class="grid">
+
+      <div class="card">
+        <h3>Instructions pas à pas</h3>
+        <div class="steps">
+          <div class="step">
+            <strong>Étape 1 - Civilité :</strong><br>
+            Cliquez sur le petit cercle à côté de <strong>Monsieur</strong>, <strong>Madame</strong>
+            ou <strong>Mademoiselle</strong> selon votre situation.
+          </div>
+          <div class="step">
+            <strong>Étape 2 - Prénom et Nom :</strong><br>
+            Cliquez dans le champ <strong>Prénom</strong>, tapez votre prénom,
+            puis faites de même pour le <strong>Nom</strong>.
+          </div>
+          <div class="step">
+            <strong>Étape 3 - Adresse :</strong><br>
+            Remplissez l'adresse, le code postal et la ville dans les champs correspondants.
+          </div>
+          <div class="step">
+            <strong>Étape 4 - Date de naissance :</strong><br>
+            Tapez votre date au format <span class="key">jj/mm/aaaa</span>.
+            Exemple : <strong>14/08/1959</strong>
+          </div>
+          <div class="step">
+            <strong>Étape 5 - Code à recopier :</strong><br>
+            Recopiez exactement le code affiché en bleu, en respectant
+            les majuscules et les minuscules.
+          </div>
+          <div class="step">
+            <strong>Étape 6 - Listes :</strong><br>
+            Sélectionnez votre département dans la liste, puis votre région
+            dans le menu déroulant.
+          </div>
         </div>
-          <p></p>
-        <form name="form">
-            <p align="center">
-              <select name="site" size="4" onchange="formHandler(this.form)">
-                <option value="" selected="selected">Choisir dans la liste</option>
-                <option value="erreur.html">1</option>
-                <option value="erreur.html">5</option>
-                <option value="erreur.html">10</option>
-                <option value="erreur.html">15</option>
-                <option value="erreur.html">20</option>
-                <option value="erreur.html">25</option>
-                <option value="erreur.html">30</option>
-                <option value="erreur.html">35</option>
-				
-					
-                <option value="page23-manip-03.html">40</option>
-                <option value="erreur.html">45</option>
-                <option value="erreur.html">50</option>
-                </select>
-            </p>
+      </div>
+
+      <div class="card">
+        <h3>À vous de jouer !</h3>
+
+        <form name="formulaire" onsubmit="return false;">
+
+          <div class="field">
+            <label>Civilité</label>
+            <div class="radio-group">
+              <div class="radio">
+                <input type="radio" name="civilite" value="monsieur">
+                <label>Monsieur</label>
+              </div>
+              <div class="radio">
+                <input type="radio" name="civilite" value="madame">
+                <label>Madame</label>
+              </div>
+              <div class="radio">
+                <input type="radio" name="civilite" value="mademoiselle">
+                <label>Mademoiselle</label>
+              </div>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="field">
+              <label for="prenom">Prénom</label>
+              <textarea id="prenom" name="prenom" placeholder="Votre prénom…" rows=1 style="resize:none"></textarea>
+            </div>
+            <div class="field">
+              <label for="nom">Nom</label>
+              <textarea id="nom" name="nom" placeholder="Votre nom…" rows=1 style="resize:none"></textarea>
+            </div>
+          </div>
+
+          <div class="field">
+            <label for="adresse">Adresse</label>
+            <textarea id="adresse" name="adresse" placeholder="Numéro et nom de rue…" rows=1
+              style="resize:none"></textarea>
+          </div>
+
+          <div class="form-row">
+            <div class="field">
+              <label for="cp">Code postal</label>
+              <textarea id="cp" name="cp" maxlength="5" placeholder="Ex : 75001" rows=1 style="resize:none"></textarea>
+            </div>
+            <div class="field">
+              <label for="ville">Ville</label>
+              <textarea id="ville" name="ville" placeholder="Votre ville…" rows=1 style="resize:none"></textarea>
+            </div>
+          </div>
+
+          <div class="field">
+            <label for="ddn">Date de naissance <span style="font-weight: 400;">(jj/mm/aaaa)</span></label>
+            <textarea id="ddn" name="ddn" maxlength="10" placeholder="Ex : 14/08/1959" rows=1
+              style="resize:none"></textarea>
+          </div>
+
+          <hr>
+
+          <div class="field">
+            <label for="code">
+              Recopiez ce code exactement :
+              <span class="key">AmèP45TgFp@</span>
+            </label>
+            <textarea id="code" name="code" maxlength="14" placeholder="Tapez le code ci-dessus…" rows=1
+              style="resize:none"></textarea>
+          </div>
+
+          <hr>
+
+          <div class="dropdown">
+            <label for="departement">Département</label>
+            <button class="btn btn-dropdown" id="department" type="button" onclick="toggleDropdown(this)"
+              aria-expanded="false">
+              -- Choisir un département --
+            </button>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item">69 - Rhône</a></li>
+              <li><a class="dropdown-item">01 - Ain</a></li>
+              <li><a class="dropdown-item">38 - Isère</a></li>
+              <li><a class="dropdown-item">42 - Loire</a></li>
+              <li><a class="dropdown-item">Autre département</a></li>
+            </ul>
+          </div>
+
+          <div class="dropdown">
+            <label for="region">Région</label>
+            <button class="btn btn-dropdown" id="region" type="button" onclick="toggleDropdown(this)"
+              aria-expanded="false">
+              -- Choisir une région --
+            </button>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item">Auvergne-Rhône-Alpes</a></li>
+              <li><a class="dropdown-item">Bourgogne-Franche-Comté</a></li>
+              <li><a class="dropdown-item">Provence-Alpes-Côte d'Azur</a></li>
+              <li><a class="dropdown-item">Occitanie</a></li>
+              <li><a class="dropdown-item">Île-de-France</a></li>
+              <li><a class="dropdown-item">Alsace</a></li>
+              <li><a class="dropdown-item">Normandie</a></li>
+              <li><a class="dropdown-item">Bretagne</a></li>
+              <li><a class="dropdown-item">Autre région</a></li>
+            </ul>
+          </div>
+
+          <div style="display: flex; gap: var(--spacing-s); justify-content: flex-end; margin-top: auto;">
+            <button type="reset" class="btn btn-outlined">Effacer</button>
+            <a href="../../index.html" class="btn btn-important">Terminer</a>
+          </div>
+
         </form>
-        <p><br>
+      </div>
+    </div>
+  </main>
+</body>
 
-        <br>
-        <br>
-        <br>
-        Attention !!  Une erreur vous renvoie vraiment en arriére. </p>
-	
-        </td>
-    </tr>
-</tbody></table>
-</center></div>
-
-<p><br>
-<br>
-</p>
-
-<p align="right">&nbsp;</p>
 </html>
-
-
