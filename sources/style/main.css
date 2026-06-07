@@ -157,28 +157,54 @@ hr {
   cursor: pointer;
 }
 
-.btn-primary {
+.btn-important,
+.btn-outlined:active {
   border-color: var(--brand-orange);
   background-color: var(--brand-orange);
   color: var(--core-black);
 }
 
-.btn-primary:hover {
+.btn-important:hover,
+.btn-outlined:hover {
   border-color: var(--core-black);
   background-color: var(--core-black);
   color: var(--core-white);
 }
 
-.btn-primary:active {
+.btn-important:active {
   border-color: var(--core-black);
-  background-color: var(--core-white);
+  background-color: transparent;
   color: var(--core-black);
 }
 
-.btn-primary:disabled {
+.btn-important:disabled {
   background-color: var(--grey-ccc);
   color: var(--core-white);
   border-style: none;
+}
+
+.btn-outlined {
+  border-color: var(--core-black);
+  background-color: transparent;
+  color: var(--core-black);
+}
+
+.btn-outlined:hover {
+  border-color: var(--core-black);
+  background-color: var(--core-black);
+  color: var(--core-white);
+}
+
+.btn-outlined:active {
+  border-color: var(--brand-orange);
+  background-color: var(--brand-orange);
+  color: var(--core-black);
+}
+
+.btn-outlined:disabled {  
+  background-color: transparent;
+  color: var(--grey-ccc);
+  border-color: var(--grey-ccc);
 }
 
 /* ============================================
@@ -232,7 +258,8 @@ hr {
   padding: 2px;
   background-color: var(--grey-eee);
   border: 1px solid var(--grey-ccc);
-  font-size: 16px;
+  font-size: 14px;
+  font-weight: 700;
 }
 
 /* ============================================
@@ -346,7 +373,7 @@ label,
 }
 
 textarea {
-  flex: 1; 
+  flex: 1;
   border: 2px solid var(--grey-ccc);
   padding: 5px;
   font-size: 14px;
@@ -363,6 +390,16 @@ textarea::placeholder {
 
 textarea:focus {
   border-color: var(--core-black);
+}
+
+/* ============================================
+   FORM
+   ============================================ */
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-s);
 }
 
 /* ============================================
