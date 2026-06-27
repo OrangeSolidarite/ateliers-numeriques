@@ -1,147 +1,206 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Le bon clic - Exercice</title>
+    <title>Le bon clic - Exercice 1</title>
     <link rel="stylesheet" href="../style/main.css">
-    
     <link rel="shortcut icon" type="image/x-icon" href="../images/orange-logo.svg">
 </head>
+
 <body>
-        <header>
+    <header>
         <div class="header-inner">
             <div class="header-left">
                 <a href="../../index.html">
-    <img src="../images/orange-logo.svg" alt="Logo Orange">
-</a>
+                    <img src="../images/orange-logo.svg" alt="Logo Orange">
+                </a>
                 <h1>Tutoriels - Manipulation de la souris et du clavier</h1>
             </div>
             <div class="header-right">
-                <span class="tag">Clic</span>
+                <span class="tag">Clic 1</span>
             </div>
         </div>
     </header>
 
-        <main>
-                <section class="hero">
+    <main>
+        <section class="hero">
             <h1>Le bon clic</h1>
             <p>
-                <strong>Objectif :</strong> Cliquez sur chaque bouton selon l'instruction affichée
+                <strong>Objectif :</strong> Cliquer sur chaque bouton de la façon indiquée —
+                <strong>clic gauche</strong>, <strong>clic droit</strong> ou <strong>double-clic</strong>
             </p>
         </section>
 
-                <div class="info-section">
-            <h3>💡 Instructions</h3>
+        <div class="info-section">
+            <h3>💡 Conseil important</h3>
             <p>
-                <strong>Gauche :</strong> Clic gauche simple • 
-                <strong>Droite :</strong> Clic droit • 
-                <strong>Double :</strong> Double-clic gauche rapide
+                Lisez bien ce qui est écrit sur chaque bouton avant de cliquer.
+                Un bouton marqué <strong>Gauche</strong> demande un clic gauche ordinaire,
+                <strong>Droite</strong> demande un clic droit (bouton droit de la souris),
+                et <strong>Double</strong> demande un double-clic rapide.
+                Attention : le clic droit ouvre un menu — c'est normal, c'est la preuve que vous avez réussi !
             </p>
         </div>
 
-                <div class="progress-bar">
-            <div class="progress-bar-track">
-                <div class="progress-bar-fill" id="progressFill"></div>
+        <div class="card">
+            <div style="display: flex; flex-direction: row; justify-content: space-between;">
+                <h3>Cliquez sur chaque bouton comme indiqué</h3>
+                <h3>Score : <span id="score" style="color: var(--brand-orange);">0</span> / 40</h3>
             </div>
-            <div class="progress-text">
-                <span id="progressText">0 / 40 complétés</span>
+
+            <div class="click-grid" id="click-grid"
+                style="display: grid; grid-template-columns: repeat(5, 1fr); gap: var(--spacing-s); margin-bottom: var(--spacing-m);">
+            </div>
+
+            <div
+                style="display: flex; justify-content: flex-end; align-items: center; flex-wrap: wrap; gap: var(--spacing-s);">
+                <a href="../../index.html" class="btn btn-important" id="btn-next" style="display: none;">Terminer</a>
+                <button class="btn btn-filled" onclick="resetExercice()">Effacer</button>
             </div>
         </div>
-
-                <div class="exercise-grid" id="exerciseGrid">
-                    </div>
-
-                <div style="text-align: center; margin-top: 32px;">
-            <a href="../../index.html" class="btn btn-secondary">
-                ← Retour à l'accueil
-            </a>
+        <div class="card">
+            <h3>Astuces</h3>
+            <div class="answers">
+                <div class="answer">
+                    <strong>Clic gauche :</strong> Appuyez une fois sur le <strong>bouton gauche</strong> de la souris.
+                    C'est le clic le plus courant, utilisé pour sélectionner ou valider.
+                </div>
+                <div class="answer">
+                    <strong>Clic droit :</strong> Appuyez une fois sur le <strong>bouton droit</strong> de la souris.
+                    Cela ouvre un menu contextuel avec des options supplémentaires.
+                </div>
+                <div class="answer">
+                    <strong>Double-clic :</strong> Appuyez <strong>deux fois rapidement</strong> sur le bouton gauche.
+                    Utilisé pour ouvrir un fichier ou un programme.
+                </div>
+            </div>
         </div>
     </main>
 
     <script>
-        // Configuration
-        const TOTAL_BUTTONS = 40;
-        const CLICK_TYPES = ["Gauche", "Droite", "Double"];
-        let completedCount = 0;
+        const types = ["Gauche", "Droite", "Double"];
+        let score = 0;
+        let total = 40;
+        let done = 0;
 
-        // Fonction pour générer un nombre aléatoire
-        function getRandomInt(min, max) {
-            return Math.floor(Math.random() * (max - min) + min);
+        function getLabel(type) {
+            if (type === "Gauche") return "Clic gauche";
+            if (type === "Droite") return "Clic droit";
+            if (type === "Double") return "Double-clic";
         }
 
-        // Générer les boutons
-        function generateButtons() {
-            const grid = document.getElementById('exerciseGrid');
-            
-            for (let i = 1; i <= TOTAL_BUTTONS; i++) {
-                const button = document.createElement('button');
-                const clickType = CLICK_TYPES[getRandomInt(0, 3)];
-                
-                button.id = `btn-${i}`;
-                button.className = 'exercise-btn';
-                button.textContent = clickType;
-                button.dataset.clickType = clickType;
-                button.dataset.completed = 'false';
-                
-                // Ajouter les événements
-                addEventListeners(button);
-                
-                grid.appendChild(button);
+        function buildGrid() {
+            const grid = document.getElementById("click-grid");
+            grid.innerHTML = "";
+            score = 0;
+            done = 0;
+            document.getElementById("score").textContent = "0";
+            document.getElementById("btn-next").style.display = "none";
+
+            for (let i = 0; i < total; i++) {
+                const type = types[Math.floor(Math.random() * 3)];
+                const btn = document.createElement("button");
+                btn.className = "btn btn-outlined";
+                btn.style = "width: 100%"
+                btn.textContent = getLabel(type);
+                btn.dataset.type = type;
+                btn.dataset.done = "false";
+
+                // Clic gauche
+                btn.addEventListener("click", function (e) {
+                    if (e.detail === 1) {
+                        // Attendre un court délai pour voir si un 2e clic arrive
+                        btn._clickTimer = setTimeout(() => {
+                            handleClick(btn, "Gauche");
+                        }, 250);
+                    } else {
+                        // C'est le 2e clic du double-clic, on annule le timer
+                        clearTimeout(btn._clickTimer);
+                    }
+                });
+
+                // Clic droit
+                btn.addEventListener("contextmenu", function (e) {
+                    e.preventDefault();
+                    handleClick(btn, "Droite");
+                });
+
+                // Double-clic
+                btn.addEventListener("dblclick", function (e) {
+                    handleClick(btn, "Double");
+                });
+
+                btn.addEventListener("mouseleave", function () {
+                    if (btn.classList.contains("btn-positive")) {
+                        btn.style.backgroundColor = ""
+                        btn.style.borderColor = ""
+                        btn.style.color = ""
+                    } else if (btn.classList.contains("btn-negative")) {
+                        btn.style.backgroundColor = ""
+                        btn.style.borderColor = ""
+                        btn.style.color = ""
+                    }
+                });
+
+                grid.appendChild(btn);
             }
         }
 
-        // Ajouter les écouteurs d'événements
-        function addEventListeners(button) {
-            const clickType = button.dataset.clickType;
-            
-            if (clickType === "Gauche") {
-                button.addEventListener('click', function(e) {
-                    e.preventDefault();
-                    markAsCompleted(this);
-                });
-            } else if (clickType === "Droite") {
-                button.addEventListener('contextmenu', function(e) {
-                    e.preventDefault();
-                    markAsCompleted(this);
-                });
-            } else if (clickType === "Double") {
-                button.addEventListener('dblclick', function(e) {
-                    e.preventDefault();
-                    markAsCompleted(this);
-                });
-            }
-        }
+        function handleClick(btn, clickType) {
+            const expected = btn.dataset.type;
 
-        // Marquer comme complété
-        function markAsCompleted(button) {
-            if (button.dataset.completed === 'false') {
-                button.dataset.completed = 'true';
-                button.classList.add('completed');
-                completedCount++;
-                updateProgress();
-                
-                // Vérifier si tous les boutons sont complétés
-                if (completedCount === TOTAL_BUTTONS) {
-                    setTimeout(() => {
-                        alert('🎉 Félicitations ! Vous avez complété tous les exercices !');
-                    }, 300);
+            const wasDone = btn.dataset.done === "true";
+            const wasSuccess = btn.classList.contains("btn-positive");
+
+            btn.dataset.done = "true";
+
+            if (clickType === expected) {
+                if (!wasSuccess) {
+                    if (wasDone) score = Math.max(0, score - 0); // était rouge, devient vert
+                    score++;
+                    document.getElementById("score").textContent = score;
                 }
+                btn.classList.remove("btn-negative");
+
+                btn.classList.add("btn-positive");
+                btn.style.backgroundColor = "var(--functional-green)"
+                btn.style.borderColor = "var(--functional-green)"
+                btn.style.color = "var(--core-black)"
+
+            } else {
+                if (wasSuccess) {
+                    score = Math.max(0, score - 1); // était vert, devient rouge
+                    document.getElementById("score").textContent = score;
+                }
+                btn.classList.remove("btn-positive");
+
+                btn.classList.add("btn-negative");
+                btn.style.backgroundColor = "var(--functional-red)"
+                btn.style.borderColor = "var(--functional-red)"
+                btn.style.color = "var(--core-white)"
+            }
+
+            done = document.querySelectorAll(".btn-positive").length;
+
+            if (done === total) {
+                document.getElementById("btn-next").style.display = "inline-flex";
+                setTimeout(() => {
+                    alert('🎉 Félicitations ! Vous avez complété tous les exercices !');
+                }, 300);
+            } else {
+                document.getElementById("btn-next").style.display = "none";
             }
         }
 
-        // Mettre à jour la barre de progression
-        function updateProgress() {
-            const percentage = (completedCount / TOTAL_BUTTONS) * 100;
-            document.getElementById('progressFill').style.width = percentage + '%';
-            document.getElementById('progressText').textContent = 
-                `${completedCount} / ${TOTAL_BUTTONS} complétés`;
+        function resetExercice() {
+            buildGrid();
         }
 
-        // Initialiser au chargement de la page
-        document.addEventListener('DOMContentLoaded', function() {
-            generateButtons();
-        });
+        buildGrid();
     </script>
+
 </body>
+
 </html>

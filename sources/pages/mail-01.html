@@ -1,171 +1,114 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="fr">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Formulaire - Exercice 1</title>
-    <link rel="stylesheet" href="../style/main.css">
-    
-    <link rel="shortcut icon" type="image/x-icon" href="../images/orange-logo.svg">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Envoyer un email - Exercice 1</title>
+  <link rel="stylesheet" href="../style/main.css">
+  <link rel="shortcut icon" type="image/x-icon" href="../images/orange-logo.svg">
 </head>
+
 <body>
-        <header>
-        <div class="header-inner">
-            <div class="header-left">
-                <a href="../../index.html">
-    <img src="../images/orange-logo.svg" alt="Logo Orange">
-</a>
-                <h1>Tutoriels - Manipulation de la souris et du clavier</h1>
-            </div>
-            <div class="header-right">
-                <span class="tag">Formulaire</span>
-            </div>
+  <script src="../scripts/main.js"></script>
+  <header>
+    <div class="header-inner">
+      <div class="header-left">
+        <a href="../../index.html">
+          <img src="../images/orange-logo.svg" alt="Logo Orange">
+        </a>
+        <h1>Tutoriels - Manipulation de la souris et du clavier</h1>
+      </div>
+      <div class="header-right">
+        <span class="tag">Mail 1</span>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <h1>Envoyer un message électronique</h1>
+      <p>
+        <strong>Objectif :</strong> Apprendre à rédiger et envoyer un
+        <strong>mail</strong> (aussi appelé courriel ou message électronique)
+      </p>
+    </section>
+
+    <div class="info-section">
+      <h3>💡 Conseil important</h3>
+      <p>
+        Pour envoyer un message, il faut <strong>3 informations</strong> : l'adresse mail du
+        destinataire, l'objet du message et le texte du message. L'adresse mail doit être
+        tapée <strong>sans espace, sans majuscule et sans accent</strong>.
+      </p>
+    </div>
+
+    <div class="grid">
+
+      <div class="card">
+        <h3>Instructions pas à pas</h3>
+        <div class="steps">
+          <div class="step">
+            <strong>Étape 1 - Adresse du destinataire :</strong><br>
+            Cliquez dans le champ <strong>À :</strong> puis tapez l'adresse mail du destinataire.<br>
+            Exemple : <span class="key">a.dreuilhe@cyber-base.org</span><br>
+            <em>Attention : en minuscule, pas d'accent ni d'espace.</em>
+          </div>
+          <div class="step">
+            <strong>Étape 2 - Objet du message :</strong><br>
+            Cliquez dans le champ <strong>Objet :</strong> puis tapez le sujet de votre message.<br>
+            Exemple : <span class="key">invitation expo d'Auvillar dimanche</span>
+          </div>
+          <div class="step">
+            <strong>Étape 3 - Contenu du message :</strong><br>
+            Cliquez dans la <strong>zone blanche</strong> en bas puis tapez le contenu
+            de votre message.
+          </div>
+          <div class="step">
+            <strong>Étape 4 - Envoyer :</strong><br>
+            Cliquez sur le bouton <strong>Envoyer</strong> en haut à droite pour
+            expédier votre message.
+          </div>
         </div>
-    </header>
+      </div>
 
-        <main>
-                <section class="hero">
-            <h1>Apprendre à remplir un formulaire</h1>
-            <p>
-                <strong>Objectif :</strong> Saisir vos informations personnelles dans un formulaire
-            </p>
-        </section>
+      <div class="card">
+        <h3>À vous de jouer !</h3>
 
-                <div class="info-section">
-            <h3>💡 Qu'est-ce qu'un formulaire ?</h3>
-            <p>
-                Un formulaire permet de saisir des informations (nom, adresse, etc.) sur un site web. 
-                Vous devez cliquer dans chaque zone et taper au clavier.
-            </p>
-        </div>
+        <form name="formulaire" onsubmit="sendEmail(); return false;">
 
-                <div class="grid">
-                        <div class="card" style="background-color: #e6fff2;">
-                <h3>📝 Formulaire à remplir</h3>
-                
-                <form style="margin-top: 20px;">
-                    <div style="margin-bottom: 20px;">
-                        <label for="prenom" style="display: block; margin-bottom: 8px; font-weight: bold;">
-                            Prénom :
-                        </label>
-                        <input type="text" 
-                               id="prenom" 
-                               name="prenom" 
-                               style="width: 100%; padding: 12px; border: 2px solid #ccc; border-radius: 8px; font-size: 16px;">
-                    </div>
+          <div class="field">
+            <label for="destinataire">À :</label>
+            <textarea id="destinataire" name="destinataire" placeholder="Adresse mail du destinataire…" rows="1"
+              style="resize: none;"></textarea>
+          </div>
 
-                    <div style="margin-bottom: 20px;">
-                        <label for="nom" style="display: block; margin-bottom: 8px; font-weight: bold;">
-                            Nom :
-                        </label>
-                        <input type="text" 
-                               id="nom" 
-                               name="nom" 
-                               style="width: 100%; padding: 12px; border: 2px solid #ccc; border-radius: 8px; font-size: 16px;">
-                    </div>
+          <div class="field">
+            <label for="objet">Objet :</label>
+            <textarea id="objet" name="objet" placeholder="Objet du message…" rows="1" style="resize: none;"></textarea>
+          </div>
 
-                    <div style="margin-bottom: 20px;">
-                        <label for="adresse" style="display: block; margin-bottom: 8px; font-weight: bold;">
-                            Adresse :
-                        </label>
-                        <textarea id="adresse" 
-                                  name="adresse" 
-                                  rows="5" 
-                                  style="width: 100%; padding: 12px; border: 2px solid #ccc; border-radius: 8px; font-size: 16px; resize: vertical;"></textarea>
-                    </div>
+          <div class="field">
+            <label for="message">Message :</label>
+            <textarea id="message" name="message" placeholder="Tapez votre message ici…" rows="6"></textarea>
+          </div>
 
-                    <div style="text-align: center;">
-                        <button type="reset" 
-                                class="btn" 
-                                style="background-color: #666; color: white; padding: 12px 24px; border: none; border-radius: 8px; cursor: pointer; font-size: 16px;">
-                            Effacer
-                        </button>
-                    </div>
+          <div style="display: flex; gap: var(--spacing-s); justify-content: flex-end; margin-top: auto;">
+            <button type="reset" class="btn btn-outlined">Effacer</button>
+            <button type="submit" class="btn btn-filled">Envoyer</button>
+          </div>
 
-                    <div class="info-section" style="background-color: #fff4e6; margin-top: 20px;">
-                        <p style="margin: 0; color: #000;">
-                            <strong>ℹ️ Info :</strong> Le bouton "Effacer" efface tout le texte des zones de saisie
-                        </p>
-                    </div>
-                </form>
-            </div>
+        </form>
 
-                        <div class="card">
-                <h3>Instructions détaillées</h3>
-                
-                <div class="steps">
-                    <div class="step">
-                        <strong>1. Cliquer dans la zone "Prénom" :</strong><br>
-                        Cliquez dans la zone blanche à côté de <span style="color: #ff0000;">Prénom</span>. 
-                        Le trait vertical clignotant (le curseur) signifie que vous pouvez taper au clavier.
-                    </div>
-                    
-                    <div class="step">
-                        <strong>2. Taper votre prénom :</strong><br>
-                        Pour les lettres majuscules : maintenez la touche <strong style="color: #ff0000;">Maj</strong> 
-                        (majuscule) enfoncée et tapez la lettre désirée.
-                    </div>
-                    
-                    <div class="step">
-                        <strong>3. Passer au champ suivant :</strong><br>
-                        Appuyez sur la touche <strong style="color: #ff0000;">Tabulation</strong> (à gauche du clavier). 
-                        Le curseur se déplace automatiquement dans la zone "Nom".
-                    </div>
-                    
-                    <div class="step">
-                        <strong>4. Taper votre nom :</strong><br>
-                        <span style="color: #ff0000;">TOUJOURS</span> regarder le trait clignotant (curseur) 
-                        pour savoir si vous êtes placé au bon endroit.
-                    </div>
-                    
-                    <div class="step">
-                        <strong>5. Passer à l'adresse :</strong><br>
-                        Appuyez à nouveau sur <strong>Tabulation</strong>. Vérifiez que le curseur clignote dans la zone "Adresse".
-                    </div>
-                    
-                    <div class="step">
-                        <strong>6. Taper votre adresse :</strong><br>
-                        À la fin de la première ligne, appuyez sur la touche <strong style="color: #ff0000;">Entrée</strong> 
-                        (à droite du clavier) pour passer à la ligne suivante.
-                    </div>
-                </div>
-            </div>
-        </div>
+      </div>
 
-                <div class="card" style="margin-top: 24px;">
-            <h3>Aide visuelle - Les touches importantes</h3>
-            
-            <div style="display: flex; justify-content: space-around; flex-wrap: wrap; gap: 20px; margin-top: 20px;">
-                <div style="text-align: center;">
-                    <img src="../images/maj.jpg" alt="Touche Majuscule" style="max-width: 150px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.png">
-                    <p style="margin-top: 8px; font-weight: bold;">Touche Majuscule</p>
-                </div>
-                
-                <div style="text-align: center;">
-                    <img src="../images/curseur.jpg" alt="Curseur" style="max-width: 150px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.png">
-                    <p style="margin-top: 8px; font-weight: bold;">Le curseur clignotant</p>
-                </div>
-                
-                <div style="text-align: center;">
-                    <img src="../images/tab.jpg" alt="Touche Tabulation" style="max-width: 150px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.png">
-                    <p style="margin-top: 8px; font-weight: bold;">Touche Tabulation</p>
-                </div>
-                
-                <div style="text-align: center;">
-                    <img src="../images/entre.jpg" alt="Touche Entrée" style="max-width: 150px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.png">
-                    <p style="margin-top: 8px; font-weight: bold;">Touche Entrée</p>
-                </div>
-            </div>
-        </div>
+    </div>
 
-                <div style="text-align: center; margin-top: 32px;">
-            <p style="margin-bottom: 16px; font-size: 18px;">
-                Cliquez sur le bouton <strong style="color: #ff0000;">Suite</strong> pour continuer l'exercice
-            </p>
-            <a href="mail-02.html" class="btn btn-important">
-                Suite
-            </a>
-        </div>
-    </main>
+    <div style="display: flex; justify-content: flex-end;">
+      <a href="../../index.html" class="btn btn-important" id="btn-next" style="display: none;">Terminer</a>
+    </div>
+  </main>
+
 </body>
+
 </html>

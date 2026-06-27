@@ -157,54 +157,118 @@ hr {
   cursor: pointer;
 }
 
-.btn-important,
-.btn-outlined:active {
-  border-color: var(--brand-orange);
+.btn-important {
   background-color: var(--brand-orange);
+  border-color: var(--brand-orange);
   color: var(--core-black);
 }
 
-.btn-important:hover,
-.btn-outlined:hover {
-  border-color: var(--core-black);
+.btn-important:hover {
   background-color: var(--core-black);
+  border-color: var(--core-black);
   color: var(--core-white);
 }
 
 .btn-important:active {
-  border-color: var(--core-black);
   background-color: transparent;
+  border-color: var(--core-black);
   color: var(--core-black);
 }
 
 .btn-important:disabled {
   background-color: var(--grey-ccc);
+  border: none;
   color: var(--core-white);
-  border-style: none;
+}
+
+.btn-filled {
+  background-color: var(--core-black);
+  border-color: var(--core-black);
+  color: var(--core-white);
+}
+
+.btn-filled:hover {
+  background-color: transparent;
+  border-color: var(--core-black);
+  color: var(--core-black);
+}
+
+.btn-filled:active {
+  background-color: var(--brand-orange);
+  border-color: var(--brand-orange);
+  color: var(--core-black);
 }
 
 .btn-outlined {
-  border-color: var(--core-black);
   background-color: transparent;
+  border-color: var(--core-black);
   color: var(--core-black);
 }
 
 .btn-outlined:hover {
-  border-color: var(--core-black);
   background-color: var(--core-black);
+  border-color: var(--core-black);
   color: var(--core-white);
 }
 
 .btn-outlined:active {
-  border-color: var(--brand-orange);
   background-color: var(--brand-orange);
+  border-color: var(--brand-orange);
   color: var(--core-black);
 }
 
 .btn-outlined:disabled {
   background-color: transparent;
-  color: var(--grey-ccc);
   border-color: var(--grey-ccc);
+  color: var(--grey-ccc);
+}
+
+.btn-positive {
+  background-color: var(--functional-green);
+  border-color: var(--functional-green);
+  color: var(--core-black);
+}
+
+.btn-positive:hover {
+  background-color: var(--core-black);
+  border-color: var(--core-black);
+  color: var(--core-white);
+}
+
+.btn-positive:active {
+  background-color: var(--brand-orange);
+  border-color: var(--brand-orange);
+  color: var(--core-black);
+}
+
+.btn-positive:disabled {
+  background-color: transparent;
+  border-color: var(--grey-ccc);
+  color: var(--grey-ccc);
+}
+
+.btn-negative {
+  background-color: var(--functional-red);
+  border-color: var(--functional-red);
+  color: var(--core-white);
+}
+
+.btn-negative:hover {
+  background-color: var(--core-black);
+  border-color: var(--core-black);
+  color: var(--core-white);
+}
+
+.btn-negative:active {
+  background-color: var(--brand-orange);
+  border-color: var(--brand-orange);
+  color: var(--core-black);
+}
+
+.btn-negative:disabled {
+  background-color: transparent;
+  border-color: var(--grey-ccc);
+  color: var(--grey-ccc);
 }
 
 /* ============================================
@@ -359,10 +423,16 @@ label,
   background-color: var(--grey-ccc);
 }
 
-.dropdown-item:focus {
+.dropdown-item:active {
   background-color: var(--core-black);
   color: var(--core-white);
 }
+
+.dropdown-item.selected {
+  background-color: var(--grey-ccc);
+}
+
+
 
 /* ============================================
    TEXTAREA
