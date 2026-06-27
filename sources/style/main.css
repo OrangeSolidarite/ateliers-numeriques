@@ -201,7 +201,7 @@ hr {
   color: var(--core-black);
 }
 
-.btn-outlined:disabled {  
+.btn-outlined:disabled {
   background-color: transparent;
   color: var(--grey-ccc);
   border-color: var(--grey-ccc);
@@ -280,7 +280,6 @@ label,
   font-weight: 700;
   color: var(--core-black);
   line-height: 18px;
-  white-space: nowrap;
 }
 
 .btn-dropdown,
@@ -302,6 +301,10 @@ label,
   user-select: none;
   width: 100%;
   text-align: left;
+}
+
+.btn-dropdown.has-value {
+  color: var(--core-black);
 }
 
 .btn-dropdown::after {
@@ -385,7 +388,6 @@ textarea {
 
 textarea::placeholder {
   color: var(--grey-666);
-  letter-spacing: 0px;
 }
 
 textarea:focus {
@@ -402,6 +404,18 @@ form {
   gap: var(--spacing-s);
 }
 
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--spacing-s);
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
 /* ============================================
    HEADER
    ============================================ */
@@ -410,6 +424,10 @@ header {
   color: var(--core-white);
   padding: var(--spacing-s) var(--spacing-m);
   box-shadow: var(--shadow-sm);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+
 }
 
 .header-inner {

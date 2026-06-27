@@ -11,38 +11,54 @@ function toggleDropdown(btn) {
   }
 }
 
-function selectOption(el, type) {
+function selectOption(el) {
   event.preventDefault();
   const menu = el.closest('.dropdown-menu');
   const btn = menu.previousElementSibling;
-  const feedbackSuccess = document.getElementById('feedback-success');
-  const feedbackError = document.getElementById('feedback-error');
-  const btnSuite = document.getElementById('btn-suite');
 
-  // Mise à jour du bouton dropdown si présent
   if (btn && btn.classList.contains('btn-dropdown')) {
-    btn.childNodes[0].textContent = el.textContent;
+    if (!btn.dataset.placeholder) {
+      btn.dataset.placeholder = btn.childNodes[0].textContent.trim();
+    }
+
+    const selectedValue = el.textContent.trim();
+    const currentValue = btn.childNodes[0].textContent.trim();
+
+    if (currentValue === selectedValue) {
+      resetDropdown(btn);
+    } else {
+      btn.childNodes[0].textContent = selectedValue;
+      btn.classList.add('has-value');
+    }
+
     menu.classList.remove('open');
     btn.setAttribute('aria-expanded', 'false');
   }
+}
 
-  // Reset feedbacks
-  if (feedbackSuccess) feedbackSuccess.style.display = 'none';
-  if (feedbackError) feedbackError.style.display = 'none';
-  if (btnSuite) btnSuite.style.display = 'none';
-
-  if (type === 'success') {
-    if (feedbackSuccess) feedbackSuccess.style.display = 'flex';
-    if (btnSuite) btnSuite.style.display = 'inline-flex';
-  } else if (type === 'error') {
-    if (feedbackError) feedbackError.style.display = 'flex';
-    else window.location.href = 'erreur.html';
+function resetDropdown(btn) {
+  if (btn.dataset.placeholder) {
+    btn.childNodes[0].textContent = btn.dataset.placeholder;
   }
+  btn.classList.remove('has-value');
 }
 
 document.addEventListener('click', function (e) {
   if (!e.target.closest('.dropdown')) {
     document.querySelectorAll('.dropdown-menu.open').forEach(m => m.classList.remove('open'));
     document.querySelectorAll('.btn-dropdown').forEach(b => b.setAttribute('aria-expanded', 'false'));
+  }
+});
+
+document.addEventListener('DOMContentLoaded', function () {
+  document.querySelectorAll('.btn-dropdown').forEach(btn => {
+    btn.dataset.placeholder = btn.childNodes[0].textContent.trim();
+  });
+
+  const resetBtn = document.querySelector('button[type="reset"]');
+  if (resetBtn) {
+    resetBtn.addEventListener('click', function () {
+      document.querySelectorAll('.btn-dropdown').forEach(btn => resetDropdown(btn));
+    });
   }
 });

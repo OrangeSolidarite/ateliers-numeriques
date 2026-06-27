@@ -48,18 +48,7 @@
       left: 50%;
       transform: translate(-50%, -50%);
     }
-
-    .form-row {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: var(--spacing-s);
-    }
-
-    .field {
-      display: flex;
-      flex-direction: column;
-      gap: 4px;
-    }
+    
   </style>
 </head>
 
@@ -209,11 +198,11 @@
               -- Choisir un département --
             </button>
             <ul class="dropdown-menu">
-              <li><a class="dropdown-item">69 - Rhône</a></li>
-              <li><a class="dropdown-item">01 - Ain</a></li>
-              <li><a class="dropdown-item">38 - Isère</a></li>
-              <li><a class="dropdown-item">42 - Loire</a></li>
-              <li><a class="dropdown-item">Autre département</a></li>
+              <li><a class="dropdown-item" onclick="selectOption(this)">69 - Rhône</a></li>
+              <li><a class="dropdown-item" onclick="selectOption(this)">01 - Ain</a></li>
+              <li><a class="dropdown-item" onclick="selectOption(this)">38 - Isère</a></li>
+              <li><a class="dropdown-item" onclick="selectOption(this)">42 - Loire</a></li>
+              <li><a class="dropdown-item" onclick="selectOption(this)">Autre département</a></li>
             </ul>
           </div>
 
@@ -224,15 +213,15 @@
               -- Choisir une région --
             </button>
             <ul class="dropdown-menu">
-              <li><a class="dropdown-item">Auvergne-Rhône-Alpes</a></li>
-              <li><a class="dropdown-item">Bourgogne-Franche-Comté</a></li>
-              <li><a class="dropdown-item">Provence-Alpes-Côte d'Azur</a></li>
-              <li><a class="dropdown-item">Occitanie</a></li>
-              <li><a class="dropdown-item">Île-de-France</a></li>
-              <li><a class="dropdown-item">Alsace</a></li>
-              <li><a class="dropdown-item">Normandie</a></li>
-              <li><a class="dropdown-item">Bretagne</a></li>
-              <li><a class="dropdown-item">Autre région</a></li>
+              <li><a class="dropdown-item" onclick="selectOption(this)">Auvergne-Rhône-Alpes</a></li>
+              <li><a class="dropdown-item" onclick="selectOption(this)">Bourgogne-Franche-Comté</a></li>
+              <li><a class="dropdown-item" onclick="selectOption(this)">Provence-Alpes-Côte d'Azur</a></li>
+              <li><a class="dropdown-item" onclick="selectOption(this)">Occitanie</a></li>
+              <li><a class="dropdown-item" onclick="selectOption(this)">Île-de-France</a></li>
+              <li><a class="dropdown-item" onclick="selectOption(this)">Alsace</a></li>
+              <li><a class="dropdown-item" onclick="selectOption(this)">Normandie</a></li>
+              <li><a class="dropdown-item" onclick="selectOption(this)">Bretagne</a></li>
+              <li><a class="dropdown-item" onclick="selectOption(this)">Autre région</a></li>
             </ul>
           </div>
 
